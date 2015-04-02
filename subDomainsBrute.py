@@ -59,7 +59,6 @@ class DNSBrute:
 
     def _print_progress(self):
         self.lock.acquire()
-        sys.stdout.write('\r' + '\0' * self.console_width)
         msg = '%s found | %s remaining | %s scanned in %.2f seconds' % (
             self.found_count, self.queue.qsize(), self.scan_count, time.time() - self.start_time)
         sys.stdout.write('\r' + ' ' * (self.console_width -len(msg)) + msg)
@@ -88,9 +87,10 @@ class DNSBrute:
                     if is_wildcard_record: self._update_scan_count(); self._print_progress(); continue
                     self.lock.acquire()
                     self.found_count += 1
-                    sys.stdout.write('\r' + '\0' * self.console_width)    # clear line
                     ips = ', '.join([answer.address for answer in answers])
-                    sys.stdout.write('\r' + cur_sub_domain + '\t' + ips  + '\n')
+                    msg = cur_sub_domain.ljust(30) + ips
+                    sys.stdout.write('\r' + msg + ' ' * (self.console_width- len(msg)) + '\n\r')
+                    sys.stdout.flush()
                     self.outfile.write(cur_sub_domain.ljust(30) + '\t' + ips + '\n')
                     self.lock.release()
                     for i in self.next_subs:
