@@ -68,6 +68,7 @@ class DNSBrute:
     def _scan(self):
         thread_id = int( threading.currentThread().getName() )
         self.resolvers[thread_id].nameservers = [self.dns_servers[thread_id % self.dns_count]]    # must be a list object
+        self.resolvers[thread_id].lifetime = 1.0; self.resolvers[thread_id].timeout = 1.0
         while self.queue.qsize() > 0:
             sub = self.queue.get(timeout=1.0)
             try:
