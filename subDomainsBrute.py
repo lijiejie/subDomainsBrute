@@ -17,13 +17,17 @@ class DNSBrute:
     def __init__(self, target, names_file, threads_num, output):
         self.target = target.strip()
         self.names_file = names_file
-        self.threads_num = threads_num
-        self.scan_count = 0; self.found_count = 0
+        self.thread_count = self.threads_num = threads_num
+        self.scan_count = self.found_count = 0
         self.lock = threading.Lock()
-        self.console_width, _ = getTerminalSize(); self.console_width -= 2    # Cal width when starts up
-        self.resolvers = [dns.resolver.Resolver() for i in range(threads_num)]
-        self._load_dns_servers(); self._load_sub_names(); self._load_next_sub()
-        outfile = target + '.txt' if not output else output; self.outfile = open(outfile, 'w')   # won't close manually
+        self.console_width = getTerminalSize()[0]
+        self.console_width -= 2    # Cal width when starts up
+        self.resolvers = [dns.resolver.Resolver() for _ in range(threads_num)]
+        self._load_dns_servers()
+        self._load_sub_names()
+        self._load_next_sub()
+        outfile = target + '.txt' if not output else output
+        self.outfile = open(outfile, 'w')   # won't close manually
         self.ip_dict = {}
 
     def _load_dns_servers(self):
@@ -68,7 +72,7 @@ class DNSBrute:
     def _scan(self):
         thread_id = int( threading.currentThread().getName() )
         self.resolvers[thread_id].nameservers = [self.dns_servers[thread_id % self.dns_count]]    # must be a list object
-        self.resolvers[thread_id].lifetime = 1.0; self.resolvers[thread_id].timeout = 1.0
+        self.resolvers[thread_id].lifetime = self.resolvers[thread_id].timeout = 1.0
         while self.queue.qsize() > 0:
             sub = self.queue.get(timeout=1.0)
             try:
@@ -82,10 +86,13 @@ class DNSBrute:
                             self.ip_dict[answer.address] = 1
                         else:
                             self.ip_dict[answer.address] += 1
-                            if self.ip_dict[answer.address] > 10:    # a wildcard DNS record
+                            if self.ip_dict[answer.address] > 6:    # a wildcard DNS record
                                 is_wildcard_record = True
                         self.lock.release()
-                    if is_wildcard_record: self._update_scan_count(); self._print_progress(); continue
+                    if is_wildcard_record:
+                        self._update_scan_count()
+                        self._print_progress()
+                        continue
                     self.lock.acquire()
                     self.found_count += 1
                     ips = ', '.join([answer.address for answer in answers])
@@ -101,12 +108,19 @@ class DNSBrute:
             self._update_scan_count()
             self._print_progress()
         self._print_progress()
+        self.lock.acquire()
+        self.thread_count -= 1
+        self.lock.release()
 
     def run(self):
         self.start_time = time.time()
         for i in range(self.threads_num):
             t = threading.Thread(target=self._scan, name=str(i))
+            t.setDaemon(True)
             t.start()
+        while self.thread_count > 0:
+            time.sleep(0.01)
+
 
 if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target')
