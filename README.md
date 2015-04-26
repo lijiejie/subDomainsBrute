@@ -2,6 +2,8 @@
 
 A simple and fast sub domain brute tool for pentesters
 
+这个脚本的主要目标是发现其他工具无法探测到的域名. 比如大家常用的Google，aizhan，fofa。
+
 ##Dependencies
 First you need install [dnspython](http://www.dnspython.org/kits/1.12.0/) to do DNS query
 

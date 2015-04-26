@@ -73,7 +73,7 @@ class DNSBrute:
         thread_id = int( threading.currentThread().getName() )
         self.resolvers[thread_id].nameservers = [self.dns_servers[thread_id % self.dns_count]]    # must be a list object
         self.resolvers[thread_id].lifetime = self.resolvers[thread_id].timeout = 1.0
-        while self.queue.qsize() > 0:
+        while self.queue.qsize() > 0 and self.found_count < 3000:    # limit found count to 3000
             sub = self.queue.get(timeout=1.0)
             try:
                 cur_sub_domain = sub + '.' + self.target
