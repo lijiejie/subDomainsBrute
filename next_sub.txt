@@ -2,6 +2,8 @@ test
 test2
 t
 dev
+develop
+developer
 1
 2
 3
@@ -20,6 +22,7 @@ sys
 system
 manage
 manager
+mg
 mgr
 b
 c
@@ -31,6 +34,7 @@ wechat
 wx
 wiki
 upload
+uploads
 ftp
 pic
 jira
@@ -105,9 +109,11 @@ scanner
 sandbox
 ldap
 lab
+labs
 go
 demo
 console
 cms
 auth
 crm
+root
