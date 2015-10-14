@@ -1,0 +1,13 @@
+www.daojia.com                	211.151.115.240, 211.151.115.241
+cs.daojia.com                 	211.151.115.241, 211.151.115.240
+homepage1.daojia.com          	211.151.115.241, 211.151.115.240
+regione.daojia.com            	211.151.115.240, 211.151.115.241
+www5a.daojia.com              	211.151.115.241, 211.151.115.240
+www5b.daojia.com              	211.151.115.241, 211.151.115.240
+mail.daojia.com               	112.90.78.157, 112.90.77.178
+xml.daojia.com                	182.92.225.109
+wiki.daojia.com               	10.5.10.40, 10.5.10.23
+crm.daojia.com                	211.151.3.53, 211.151.3.51
+exam.daojia.com               	112.126.83.148
+oa.daojia.com                 	182.92.225.109
+jira.daojia.com               	211.151.115.214

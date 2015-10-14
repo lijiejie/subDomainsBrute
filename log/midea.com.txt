@@ -1,0 +1,65 @@
+www.midea.com                 	103.243.139.241, 103.243.139.239
+i.midea.com                   	42.120.60.23
+mail.midea.com                	58.252.101.23
+app.midea.com                 	42.120.61.116
+st.midea.com                  	223.6.255.236
+forum.midea.com               	42.120.217.94
+webmail.midea.com             	202.104.30.99
+static.midea.com              	103.243.139.241, 103.243.139.239
+event.midea.com               	120.26.154.206
+video.midea.com               	103.243.139.241, 103.243.139.239
+is.midea.com                  	58.252.101.173
+data.midea.com                	121.41.74.247
+cms.midea.com                 	103.243.139.239, 103.243.139.241
+m.midea.com                   	58.252.101.139
+open.midea.com                	202.104.30.251
+api.midea.com                 	121.41.74.247
+login.midea.com               	58.252.101.126
+developer.midea.com           	121.40.177.60
+mobile.midea.com              	202.104.30.209
+service.midea.com             	124.160.70.112, 115.238.72.112
+img1.midea.com                	103.243.139.239, 103.243.139.241
+w.midea.com                   	223.6.255.236
+f.midea.com                   	220.241.205.74
+vpn2.midea.com                	58.20.139.98
+cims.midea.com                	58.252.101.103
+vpn.midea.com                 	58.252.101.2
+ec.midea.com                  	121.199.251.90
+im.midea.com                  	202.104.30.183
+mp.midea.com                  	58.252.101.74
+mk.midea.com                  	202.104.30.181
+y.midea.com                   	121.40.138.76
+apps.midea.com                	202.104.30.161
+map.midea.com                 	58.252.101.28
+pop3.midea.com                	58.252.101.23
+mall.midea.com                	223.6.255.236
+pop.midea.com                 	58.252.101.23
+b2b.midea.com                 	58.252.101.149
+act.midea.com                 	121.40.49.21
+brazil.midea.com              	58.252.101.54
+cac.midea.com                 	60.28.226.41, 60.28.226.51
+edm.midea.com                 	124.160.70.112
+eshop.midea.com               	202.104.30.184
+global.midea.com              	121.199.251.1
+idea.midea.com                	58.252.101.89
+iems.midea.com                	61.145.111.11
+imap.midea.com                	58.252.101.23
+ims.midea.com                 	202.104.30.69
+mas.midea.com                 	202.104.30.251
+mz.midea.com                  	202.104.30.182
+pcm.midea.com                 	202.104.30.250, 58.252.101.145
+sandbox.midea.com             	58.252.101.43
+smart.midea.com               	121.40.48.158
+smtp.midea.com                	202.104.30.99
+sns.midea.com                 	202.104.30.128
+we.midea.com                  	121.40.34.51
+wx.midea.com                  	58.252.101.160
+yun.midea.com                 	223.6.252.85
+imss.midea.com                	202.104.30.68
+weixin.midea.com              	202.104.30.244
+oms.midea.com                 	202.104.30.172
+github.midea.com              	123.58.34.245
+wechat.midea.com              	42.120.61.90
+openapi.midea.com             	121.40.141.40
+zhaopin.midea.com             	202.104.30.195
+mail.global.midea.com         	58.252.101.71

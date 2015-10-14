@@ -1,0 +1,10 @@
+www.appexnetworks.com.cn      	115.29.37.36
+dev.appexnetworks.com.cn      	106.37.197.38
+mail.appexnetworks.com.cn     	14.17.42.118, 183.60.15.173
+download.appexnetworks.com.cn 	115.29.37.36
+qa.appexnetworks.com.cn       	106.37.197.38
+project.appexnetworks.com.cn  	114.215.152.239
+pop.appexnetworks.com.cn      	163.177.72.143, 163.177.90.125
+imap.appexnetworks.com.cn     	163.177.72.143, 163.177.90.125
+smtp.appexnetworks.com.cn     	163.177.72.143, 163.177.90.125
+newsletter.appexnetworks.com.cn	114.215.152.239

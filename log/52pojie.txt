@@ -1,0 +1,8 @@
+www.52pojie.cn                	221.204.14.195
+search.52pojie.cn             	112.64.235.19, 140.206.161.48
+mail.52pojie.cn               	112.90.77.178, 112.90.78.157
+bbs.52pojie.cn                	119.28.48.213
+so.52pojie.cn                 	61.135.185.121
+avatar.52pojie.cn             	221.204.14.195
+down.52pojie.cn               	221.204.14.195
+attach.52pojie.cn             	202.102.85.92

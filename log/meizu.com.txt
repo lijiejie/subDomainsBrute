@@ -1,0 +1,128 @@
+groups.meizu.com              	124.251.61.13
+sites.meizu.com               	124.251.61.13
+staging.meizu.com             	124.251.61.13
+www5f.meizu.com               	124.251.61.13
+www.meizu.com                 	218.60.112.114
+pigg-life.meizu.com           	124.251.61.13
+www5d.meizu.com               	124.251.61.13
+user.meizu.com                	180.97.161.112
+new.meizu.com                 	125.89.61.122
+app.meizu.com                 	221.5.103.37
+u.meizu.com                   	221.5.107.243
+mail.meizu.com                	125.89.61.122
+music.meizu.com               	221.5.107.23
+bbs.meizu.com                 	180.97.161.112
+member.meizu.com              	221.5.107.27
+shop.meizu.com                	58.249.117.57
+manage.meizu.com              	14.29.125.133
+store.meizu.com               	124.251.60.229
+ab.meizu.com                  	58.249.117.42
+video.meizu.com               	221.5.102.49
+ss.meizu.com                  	60.2.148.181, 60.2.148.180
+event.meizu.com               	221.5.107.254
+hd.meizu.com                  	124.251.60.232
+static.meizu.com              	61.179.107.151
+tools.meizu.com               	221.5.107.231
+p.meizu.com                   	221.5.107.171
+partner.meizu.com             	221.5.107.228
+m.meizu.com                   	180.97.161.112
+forum.meizu.com               	180.97.161.112
+en.meizu.com                  	119.28.48.225, 119.28.48.215
+my.meizu.com                  	180.97.161.112
+order.meizu.com               	180.97.161.112
+api.meizu.com                 	14.152.74.43
+img.meizu.com                 	221.5.107.187
+res.meizu.com                 	58.52.133.87, 58.50.31.33
+p4.meizu.com                  	58.249.117.47
+safe.meizu.com                	14.152.75.155
+dl.meizu.com                  	58.249.117.5
+download.meizu.com            	106.46.132.8, 106.46.132.15, 106.46.132.14, 106.46.132.10, 106.46.132.12, 106.46.132.16
+developer.meizu.com           	221.5.103.46
+client.meizu.com              	119.147.165.228
+in.meizu.com                  	119.28.48.215, 119.28.48.225
+ru.meizu.com                  	119.28.48.225, 119.28.48.215
+item.meizu.com                	218.60.112.114
+pic.meizu.com                 	58.249.117.5
+analysis.meizu.com            	221.5.35.41
+test.meizu.com                	172.16.200.200
+spam.meizu.com                	113.106.104.214
+backup.meizu.com              	221.5.103.40
+conf.meizu.com                	192.168.17.31
+fl.meizu.com                  	14.152.75.218
+ma.meizu.com                  	14.29.68.182
+il.meizu.com                  	119.28.48.225, 119.28.48.215
+y.meizu.com                   	221.5.96.131
+iq.meizu.com                  	119.147.165.249
+mq.meizu.com                  	124.251.60.229
+g.meizu.com                   	14.152.74.23
+ms.meizu.com                  	121.40.74.143
+bug.meizu.com                 	14.152.75.94
+re.meizu.com                  	58.63.253.69
+wan.meizu.com                 	120.55.198.223
+pop3.meizu.com                	125.89.61.122
+pop.meizu.com                 	125.89.61.122
+agent.meizu.com               	122.13.212.15
+att.meizu.com                 	58.63.253.91
+bi.meizu.com                  	192.168.17.71
+cal.meizu.com                 	221.5.102.50
+cart.meizu.com                	218.60.112.114
+common.meizu.com              	221.5.107.253
+css.meizu.com                 	119.147.168.149
+device.meizu.com              	221.5.107.253
+exam.meizu.com                	14.29.125.246
+imap.meizu.com                	125.89.61.122
+magneto.meizu.com             	221.5.35.42
+mcs.meizu.com                 	124.251.61.46
+qzone.meizu.com               	14.152.75.8
+reader.meizu.com              	221.5.103.35
+resource.meizu.com            	122.13.148.115
+rom.meizu.com                 	221.194.143.85
+ros.meizu.com                 	124.251.61.41
+rtx.meizu.com                 	113.106.104.210
+sip.meizu.com                 	125.89.61.122
+stream.meizu.com              	119.147.165.245
+stun.meizu.com                	122.13.148.219
+sweep.meizu.com               	221.5.96.245
+sync.meizu.com                	221.5.103.45
+IN.meizu.com                  	119.28.48.225, 119.28.48.215
+ebook.meizu.com               	192.168.15.1
+static2.meizu.com             	58.63.253.91, 58.249.117.27
+p2.meizu.com                  	58.249.117.35
+p3.meizu.com                  	58.63.253.110
+tongji.meizu.com              	14.152.75.206
+interface.meizu.com           	119.147.168.149
+wap.music.meizu.com           	10.123.254.27
+wap.member.meizu.com          	10.123.254.27
+pic.ss.meizu.com              	120.52.22.163, 120.52.22.164
+m.my.meizu.com                	218.60.112.114
+m.order.meizu.com             	218.60.112.114
+img.res.meizu.com             	124.164.8.65
+bbs.res.meizu.com             	42.81.22.144, 123.150.52.26
+app.res.meizu.com             	175.154.189.48, 58.20.197.64, 221.206.124.46
+m.res.meizu.com               	221.204.171.158, 60.211.206.9, 121.30.192.12, 218.59.211.41, 221.204.23.22
+weixin.res.meizu.com          	220.194.200.232, 124.164.8.66
+wap.fl.meizu.com              	10.123.254.27
+api.ros.meizu.com             	124.251.61.41
+pic.stream.meizu.com          	119.147.165.245
+groups.flyme.cn               	221.5.103.38
+sites.flyme.cn                	221.5.103.38
+www7a.flyme.cn                	221.5.103.38
+www.flyme.cn                  	221.5.103.38
+staging.flyme.cn              	221.5.103.38
+i.flyme.cn                    	221.5.103.38
+app.flyme.cn                  	14.152.75.204
+bbs.flyme.cn                  	221.5.107.246
+provincia.flyme.cn            	14.152.75.209
+home.flyme.cn                 	14.152.75.209
+my.flyme.cn                   	14.152.75.209
+homepage.flyme.cn             	14.152.75.209
+cn.flyme.cn                   	14.152.75.209
+comune.flyme.cn               	14.152.75.209
+open.flyme.cn                 	221.5.107.227
+bug.flyme.cn                  	14.152.75.94
+wallet.flyme.cn               	221.5.103.53
+exchange.flyme.cn             	221.5.107.244
+cloud.flyme.cn                	221.5.103.43
+finder.flyme.cn               	221.5.103.43
+weixin.flyme.cn               	14.152.75.19
+weibo.flyme.cn                	122.13.148.220

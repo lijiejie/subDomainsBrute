@@ -1,0 +1,85 @@
+www.hunantv.com               	60.8.123.158
+passport.hunantv.com          	54.223.169.111, 54.223.147.31
+i.hunantv.com                 	120.132.47.198
+corp.hunantv.com              	112.253.38.183, 218.29.49.61, 218.29.49.58, 112.253.38.182, 112.253.38.181, 218.29.49.63, 112.253.38.178, 218.29.49.59
+mail.hunantv.com              	123.125.50.215
+baidu.hunantv.com             	123.125.114.32, 123.125.70.106
+news.hunantv.com              	124.164.8.66, 220.194.200.232
+webmail.hunantv.com           	222.240.176.23
+order.hunantv.com             	54.223.200.211, 54.223.182.27
+pay.hunantv.com               	211.151.157.108
+sms.hunantv.com               	54.223.235.110, 54.223.235.159
+tv.hunantv.com                	221.204.202.35, 125.39.226.208
+demo.hunantv.com              	120.132.47.187
+m.hunantv.com                 	220.194.200.232, 124.164.8.66
+img.hunantv.com               	60.8.123.158
+guid.hunantv.com              	120.132.47.142
+res.hunantv.com               	60.8.123.158
+wsp.hunantv.com               	42.48.108.166
+qs.hunantv.com                	118.26.188.40
+live.hunantv.com              	124.164.8.65
+dl.hunantv.com                	60.8.123.158
+download.hunantv.com          	112.253.19.169, 124.167.236.88
+so.hunantv.com                	54.223.182.165, 54.223.197.176
+adv.hunantv.com               	112.253.38.178, 112.253.38.181, 218.29.49.61, 218.29.49.59, 218.29.49.63, 218.29.49.58, 112.253.38.183, 112.253.38.182
+developer.hunantv.com         	58.83.191.80
+cash.hunantv.com              	123.59.23.12
+world.hunantv.com             	124.164.8.66, 220.194.200.232
+test.hunantv.com              	60.8.123.158
+ci.hunantv.com                	10.1.201.79
+ldap.hunantv.com              	120.132.47.205
+ops.hunantv.com               	211.151.132.58
+rc.hunantv.com                	118.26.188.51
+work.hunantv.com              	192.168.8.31
+log.hunantv.com               	123.59.21.8
+exchange.hunantv.com          	120.132.47.252
+pop.hunantv.com               	123.125.50.215
+act.hunantv.com               	120.132.47.182
+amp.hunantv.com               	118.26.188.194
+bhm.hunantv.com               	123.59.21.19
+bi.hunantv.com                	10.1.201.127
+bmc.hunantv.com               	58.83.217.86
+click.hunantv.com             	54.223.226.114, 54.223.218.217
+cloud.hunantv.com             	120.132.47.131
+css.hunantv.com               	60.8.123.158
+ent.hunantv.com               	220.194.200.232, 124.164.8.66
+game.hunantv.com              	106.3.38.21
+idp.hunantv.com               	211.151.157.118
+imap.hunantv.com              	123.125.50.215
+interactive.hunantv.com       	58.83.191.118
+list.hunantv.com              	54.223.182.165, 54.223.197.176
+mea.hunantv.com               	42.48.108.166
+ntp.hunantv.com               	118.26.188.175
+oa.hunantv.com                	113.247.251.148
+pool.hunantv.com              	123.59.23.3
+push.hunantv.com              	58.83.191.118
+q.hunantv.com                 	124.164.8.66, 220.194.200.232
+rtx.hunantv.com               	113.247.251.7
+shake.hunantv.com             	123.59.23.18
+sip.hunantv.com               	42.48.108.166
+smtp.hunantv.com              	123.125.50.212, 123.125.50.149, 123.125.50.210, 123.125.50.211
+spp.hunantv.com               	58.83.217.77
+uc.hunantv.com                	54.223.243.193, 54.223.238.173
+vote.hunantv.com              	54.223.238.0, 54.223.236.139
+weixin.hunantv.com            	54.223.236.8, 54.223.237.161
+m1.hunantv.com                	124.164.8.65
+v3.hunantv.com                	113.247.251.23
+p2.hunantv.com                	220.194.200.232, 124.164.8.66
+notify.hunantv.com            	211.151.129.152
+cs1.hunantv.com               	124.164.8.65
+oauth.hunantv.com             	120.132.47.245
+i2.hunantv.com                	124.164.8.65
+i4.hunantv.com                	116.211.79.31, 221.235.187.76
+p1.hunantv.com                	183.131.82.68, 58.50.31.33, 183.136.217.66
+p3.hunantv.com                	125.39.226.208, 221.204.202.35
+tongji.hunantv.com            	118.26.188.40
+api.passport.hunantv.com      	58.83.217.81
+a.pay.hunantv.com             	58.83.217.86
+demo.m.hunantv.com            	115.182.70.61
+test.cash.hunantv.com         	113.247.251.19
+zabbix.ops.hunantv.com        	192.168.1.193
+a.log.hunantv.com             	42.48.30.91, 42.48.30.90
+test.shake.hunantv.com        	120.132.47.129
+s.shake.hunantv.com           	123.59.23.18
+monitor.shake.hunantv.com     	123.59.23.2
+test.s.shake.hunantv.com      	120.132.47.129

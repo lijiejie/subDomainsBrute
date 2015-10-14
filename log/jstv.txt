@@ -1,0 +1,47 @@
+www.jstv.com                  	101.28.252.4, 111.202.7.252, 61.240.138.246
+secure.jstv.com               	58.213.35.19
+sites.jstv.com                	58.213.35.19
+groups.jstv.com               	58.213.35.19
+pigg-life.jstv.com            	58.213.35.19
+staging.jstv.com              	58.213.35.19
+myhome.jstv.com               	58.213.35.19
+i.jstv.com                    	122.96.142.216
+news.jstv.com                 	58.213.35.23
+mail.jstv.com                 	58.213.35.26
+edu.jstv.com                  	221.226.38.180
+static.jstv.com               	58.213.35.23
+passport.jstv.com             	58.213.35.44
+um.jstv.com                   	115.29.14.28
+hd.jstv.com                   	122.96.142.215
+auto.jstv.com                 	139.219.141.29
+m.jstv.com                    	58.213.35.23
+ads.jstv.com                  	58.213.35.30
+book.jstv.com                 	58.213.35.23
+star.jstv.com                 	221.194.184.166, 111.202.7.252
+live.jstv.com                 	211.90.28.98, 101.28.252.4, 111.202.7.252
+so.jstv.com                   	58.213.35.23
+3g.jstv.com                   	122.192.35.81
+analytics.jstv.com            	58.213.35.30
+pass.jstv.com                 	58.213.35.48
+gp.jstv.com                   	42.159.227.124
+stat.jstv.com                 	58.213.35.30
+vpn.jstv.com                  	221.6.17.86
+management.jstv.com           	58.213.35.30
+bus.jstv.com                  	58.213.35.44
+ent.jstv.com                  	58.213.35.23
+fms.jstv.com                  	122.227.245.156
+image.jstv.com                	61.240.138.246, 111.202.7.252, 211.90.28.98
+litchi.jstv.com               	122.96.142.249
+oa.jstv.com                   	221.226.91.9
+resource.jstv.com             	58.213.35.48
+tree.jstv.com                 	58.213.35.46
+wms.jstv.com                  	58.213.35.12
+svn.jstv.com                  	122.96.142.251
+weixin.jstv.com               	58.213.35.6
+dev.auto.jstv.com             	139.219.141.29
+3.auto.jstv.com               	139.219.141.29
+t.auto.jstv.com               	139.219.141.29
+test2.auto.jstv.com           	139.219.141.29
+admin.auto.jstv.com           	139.219.141.29
+api.litchi.jstv.com           	58.213.35.24
+wap.litchi.jstv.com           	58.213.35.24

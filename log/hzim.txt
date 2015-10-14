@@ -1,0 +1,9 @@
+groups.hzim.org               	122.225.106.163
+www.hzim.org                  	58.222.18.2, 180.97.144.50, 61.160.196.130
+blog.hzim.org                 	122.225.106.163
+homepage3.hzim.org            	122.225.106.163
+cs.hzim.org                   	122.225.106.163
+homepage2.hzim.org            	122.225.106.163
+comune.hzim.org               	122.225.106.163
+mail.hzim.org                 	112.90.78.157, 112.90.77.178
+cdn.hzim.org                  	61.147.118.238, 61.147.118.239

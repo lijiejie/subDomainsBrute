@@ -1,0 +1,14 @@
+www.jxntv.cn                  	58.215.109.23, 180.97.183.126
+pigg-life.jxntv.cn            	59.53.91.161
+homepage3.jxntv.cn            	59.53.91.161
+blog.jxntv.cn                 	59.53.91.161
+cs.jxntv.cn                   	59.53.91.161
+groups.jxntv.cn               	59.53.91.161
+homepage2.jxntv.cn            	59.53.91.161
+radio.jxntv.cn                	111.75.206.133
+bbs.jxntv.cn                  	211.149.201.134
+auto.jxntv.cn                 	118.67.113.147
+52.jxntv.cn                   	218.204.136.98
+img01.jxntv.cn                	101.28.252.4, 60.6.197.39, 111.202.7.252
+finance.jxntv.cn              	118.144.83.211
+game.jxntv.cn                 	121.201.55.140

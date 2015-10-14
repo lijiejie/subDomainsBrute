@@ -1,0 +1,15 @@
+www.laidingba.com             	183.131.82.69, 58.220.39.87, 122.225.28.138, 58.220.6.152
+img.laidingba.com             	61.155.197.240
+api.laidingba.com             	60.28.226.41, 60.28.226.51
+m.laidingba.com               	175.25.171.17
+me.laidingba.com              	61.155.197.240
+images.laidingba.com          	111.202.56.24
+g.laidingba.com               	185.28.220.2
+ce.laidingba.com              	61.155.197.240
+cece.laidingba.com            	61.155.197.240
+cem.laidingba.com             	61.155.197.240
+ceme.laidingba.com            	61.155.197.240
+css.laidingba.com             	111.202.56.24
+edm.laidingba.com             	61.147.84.45
+js.laidingba.com              	42.81.52.106, 42.81.52.102
+newsletter.laidingba.com      	61.147.84.45

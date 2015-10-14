@@ -1,0 +1,48 @@
+passport.gfan.com             	183.131.161.47, 222.186.20.123, 61.190.112.75, 58.220.2.10, 58.220.2.124, 61.190.112.73, 58.217.195.246, 222.186.20.109, 183.131.161.45, 183.131.161.52, 61.190.112.71
+app.gfan.com                  	117.79.80.7
+a.gfan.com                    	117.79.80.15
+www.gfan.com                  	117.79.80.7
+news.gfan.com                 	117.79.80.7
+search.gfan.com               	117.79.80.16
+mail.gfan.com                 	112.90.77.178, 112.90.78.157
+dev.gfan.com                  	117.79.80.18
+bbs.gfan.com                  	117.79.80.3
+shop.gfan.com                 	117.79.80.7
+my.gfan.com                   	117.79.80.17
+store.gfan.com                	117.79.80.7
+tv.gfan.com                   	117.79.80.3
+data.gfan.com                 	117.79.80.5
+static.gfan.com               	117.79.80.7
+m.gfan.com                    	117.79.80.3
+mail2.gfan.com                	117.79.144.131
+d.gfan.com                    	117.79.80.3
+so.gfan.com                   	112.64.235.19, 140.206.161.48
+t.gfan.com                    	117.79.80.15
+ftp.gfan.com                  	72.167.232.184
+mobile.gfan.com               	117.79.80.3
+zhidao.gfan.com               	220.181.163.228
+sea.gfan.com                  	114.112.86.209
+test.gfan.com                 	117.79.80.22
+update.gfan.com               	117.79.80.17
+eagle.gfan.com                	117.79.80.18
+press.gfan.com                	117.79.80.3
+qa.gfan.com                   	117.79.80.17
+buy.gfan.com                  	112.124.69.107
+pop.gfan.com                  	163.177.90.125, 163.177.72.143
+dev1.gfan.com                 	117.79.80.18
+down.gfan.com                 	117.79.80.11
+geek.gfan.com                 	117.79.80.15
+gms.gfan.com                  	117.79.80.13
+hao.gfan.com                  	117.79.80.17
+image.gfan.com                	60.221.255.254, 61.133.59.34, 61.156.157.183, 218.29.42.151
+imap.gfan.com                 	183.57.48.39, 14.17.57.217
+ji.gfan.com                   	117.79.80.15
+lm.gfan.com                   	114.112.86.232
+market.gfan.com               	69.28.51.105
+oem.gfan.com                  	117.79.80.17
+smtp.gfan.com                 	163.177.90.125, 163.177.72.143
+temp.gfan.com                 	72.167.232.184
+testdev.gfan.com              	117.79.80.24
+upload.gfan.com               	117.79.88.28
+attachments.gfan.com          	60.222.223.55, 60.210.11.67
+apitest.gfan.com              	117.79.80.17

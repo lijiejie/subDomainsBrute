@@ -1,0 +1,20 @@
+www.telehouse.net.cn          	121.197.16.136
+mail.telehouse.net.cn         	59.151.110.143
+lists.telehouse.net.cn        	59.151.110.143
+autodiscover.telehouse.net.cn 	42.159.161.152, 42.159.33.136, 42.159.161.184, 42.159.33.168
+rms.telehouse.net.cn          	59.151.98.181
+sip.telehouse.net.cn          	42.159.34.46
+tis.telehouse.net.cn          	59.151.98.181
+msoid.telehouse.net.cn        	42.159.32.36
+lyncdiscover.telehouse.net.cn 	42.159.34.45
+www.telehouse.net.cn          	121.197.16.136
+office.telehouse.net.cn       	59.151.98.181
+mail.telehouse.net.cn         	59.151.110.143
+lists.telehouse.net.cn        	59.151.110.143
+autodiscover.telehouse.net.cn 	42.159.161.184, 42.159.161.152, 42.159.33.136, 42.159.33.168
+rms.telehouse.net.cn          	59.151.98.181
+sip.telehouse.net.cn          	42.159.34.46
+sns.telehouse.net.cn          	59.151.98.181
+tis.telehouse.net.cn          	59.151.98.181
+tms.telehouse.net.cn          	59.151.98.181
+lyncdiscover.telehouse.net.cn 	42.159.34.45

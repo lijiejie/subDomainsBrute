@@ -1,0 +1,85 @@
+groups.mtime.com              	59.151.32.20
+pigg-life.mtime.com           	59.151.32.20
+sites.mtime.com               	59.151.32.20
+www.mtime.com                 	59.151.32.20, 59.151.32.21
+secure.mtime.com              	59.151.32.20
+people.mtime.com              	59.151.32.99
+cn.mtime.com                  	59.151.32.20
+i.mtime.com                   	59.151.32.16
+my.mtime.com                  	59.151.32.41
+passport.mtime.com            	59.151.32.63
+search.mtime.com              	59.151.32.98
+en.mtime.com                  	211.151.27.126
+news.mtime.com                	59.151.32.100
+baidu.mtime.com               	59.151.32.84
+mail.mtime.com                	59.151.32.97
+app.mtime.com                 	59.151.32.28
+video.mtime.com               	59.151.32.70
+v.mtime.com                   	59.151.32.106, 59.151.32.107
+vip.mtime.com                 	210.14.131.220
+mail2.mtime.com               	59.151.32.38
+wap.mtime.com                 	59.151.32.46
+m.mtime.com                   	59.151.32.46
+007.mtime.com                 	59.151.32.45
+api.mtime.com                 	59.151.32.36
+jobs.mtime.com                	58.251.134.154
+bt.mtime.com                  	59.151.32.71
+group.mtime.com               	59.151.32.72
+img3.mtime.com                	221.204.202.35, 125.39.226.208
+service.mtime.com             	59.151.32.102, 59.151.32.101
+img1.mtime.com                	103.243.139.240, 103.243.139.250
+img2.mtime.com                	103.243.139.250, 103.243.139.240
+test.mtime.com                	59.151.32.120
+www1.mtime.com                	59.151.32.77
+dz.mtime.com                  	59.151.32.95
+fox.mtime.com                 	59.151.32.84
+tracker.mtime.com             	59.151.32.116
+disney.mtime.com              	59.151.32.93
+events.mtime.com              	59.151.32.29
+mall.mtime.com                	210.14.131.220
+pop.mtime.com                 	59.151.32.97
+autodiscover.mtime.com        	59.151.32.97
+award.mtime.com               	59.151.32.96
+css.mtime.com                 	59.151.32.120
+feature.mtime.com             	60.28.226.41, 60.28.226.51
+imap.mtime.com                	59.151.32.97
+kiosk.mtime.com               	59.151.32.104, 210.14.131.220
+marvel.mtime.com              	59.151.32.79
+mj.mtime.com                  	59.151.32.81
+mms.mtime.com                 	210.14.131.220
+movie.mtime.com               	59.151.32.81
+ntc.mtime.com                 	59.151.32.109
+showtime.mtime.com            	59.151.32.32
+smtp.mtime.com                	59.151.32.97
+sony.mtime.com                	59.151.32.93
+upload.mtime.com              	59.151.32.87
+vf.mtime.com                  	59.151.32.74
+mail1.mtime.com               	59.151.32.39
+mail3.mtime.com               	59.151.32.7
+mail01.mtime.com              	59.151.32.7
+feed.mtime.com                	59.151.32.37
+trade.mtime.com               	210.14.131.220
+weixin.mtime.com              	59.151.32.67
+cctv.mtime.com                	59.151.32.90
+img4.mtime.com                	59.151.32.42
+img5.mtime.com                	59.151.32.42
+news1.mtime.com               	59.151.32.77
+img7.mtime.com                	59.151.32.42
+img8.mtime.com                	59.151.32.42
+piao.mtime.com                	59.151.32.85
+sandbox.my.mtime.com          	59.151.32.43
+t.m.mtime.com                 	59.151.32.46
+dev.m.mtime.com               	59.151.32.46
+1.m.mtime.com                 	59.151.32.46
+2.m.mtime.com                 	59.151.32.46
+test.007.mtime.com            	59.151.32.45
+dev.007.mtime.com             	59.151.32.45
+3.007.mtime.com               	59.151.32.45
+1.007.mtime.com               	59.151.32.45
+t.007.mtime.com               	59.151.32.45
+mail.service.mtime.com        	59.151.32.65
+list.mall.mtime.com           	210.14.131.220
+test.movie.mtime.com          	59.151.32.81
+test2.movie.mtime.com         	59.151.32.81
+t.movie.mtime.com             	59.151.32.81
+1.movie.mtime.com             	59.151.32.81

@@ -1,0 +1,9 @@
+www.touzhu.cn                 	121.201.33.10
+sms.touzhu.cn                 	121.201.33.11
+tools.touzhu.cn               	116.90.85.85
+pay.touzhu.cn                 	121.201.33.11
+mail.touzhu.cn                	14.17.42.118, 183.60.15.173
+m.touzhu.cn                   	121.201.33.11
+qa.touzhu.cn                  	121.201.33.11
+partners.touzhu.cn            	121.201.33.11
+game.touzhu.cn                	121.201.33.11

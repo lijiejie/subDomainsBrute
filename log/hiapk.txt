@@ -1,0 +1,43 @@
+www.hiapk.com                 	60.5.255.230, 220.194.200.232
+games.hiapk.com               	36.248.8.143
+mail.hiapk.com                	121.207.250.205
+news.hiapk.com                	220.194.200.232, 60.5.255.230
+search.hiapk.com              	61.135.185.121
+app.hiapk.com                 	220.194.200.232, 60.5.255.230
+bbs.hiapk.com                 	36.248.8.143
+manager.hiapk.com             	220.194.200.232, 60.5.255.230
+dev.hiapk.com                 	218.60.24.173, 218.60.24.172
+media.hiapk.com               	59.56.24.121
+i.hiapk.com                   	216.15.172.61
+cms.hiapk.com                 	10.79.146.58
+sc.hiapk.com                  	36.248.8.138
+wap.hiapk.com                 	112.80.255.120
+m.hiapk.com                   	220.194.200.232, 60.5.255.230
+gm.hiapk.com                  	59.56.23.228, 59.56.23.229
+api.hiapk.com                 	10.79.35.17
+theme.hiapk.com               	59.56.21.72
+3g.hiapk.com                  	220.194.200.232, 60.5.255.230
+zhidao.hiapk.com              	220.181.163.228
+pic.hiapk.com                 	61.136.165.32, 61.174.63.234
+images.hiapk.com              	216.15.172.61
+buy.hiapk.com                 	58.22.103.51
+wan.hiapk.com                 	121.207.254.85, 121.207.254.115
+mall.hiapk.com                	121.207.250.108
+click.hiapk.com               	58.22.104.70
+hao.hiapk.com                 	59.56.23.75
+market.hiapk.com              	59.56.24.224, 59.56.24.225
+push.hiapk.com                	121.207.242.21
+ring.hiapk.com                	59.56.23.199
+smtp.hiapk.com                	121.207.250.205
+vote.hiapk.com                	59.56.24.156, 59.56.23.198
+wp.hiapk.com                  	59.56.21.72
+wx.hiapk.com                  	59.56.23.190
+x2.hiapk.com                  	58.22.103.141
+agency.hiapk.com              	59.56.24.228
+search.bbs.hiapk.com          	140.206.161.48, 112.64.235.19
+admin.sc.hiapk.com            	117.27.155.22
+m.sc.hiapk.com                	59.56.100.23
+test2.market.hiapk.com        	58.22.103.145
+test.market.hiapk.com         	58.22.103.145
+upload.market.hiapk.com       	121.207.242.90
+monitor.market.hiapk.com      	59.56.24.64

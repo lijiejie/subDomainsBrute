@@ -1,0 +1,17 @@
+www.joy.cn                    	122.227.201.86
+ns1.joy.cn                    	122.227.201.69
+m.joy.cn                      	122.227.201.8
+wap.joy.cn                    	122.227.201.8
+3g.joy.cn                     	122.227.201.8
+w.joy.cn                      	122.227.201.112
+se.joy.cn                     	122.227.201.20
+ns2.joy.cn                    	122.227.201.19
+count.joy.cn                  	122.227.201.20
+oa.joy.cn                     	122.227.201.20
+tag.joy.cn                    	122.227.201.201
+scm.joy.cn                    	122.227.201.97
+cms.www.joy.cn                	122.227.201.18
+admin.m.joy.cn                	122.227.201.21
+stat.m.joy.cn                 	122.227.201.8
+download.3g.joy.cn            	122.227.201.114
+manage.oa.joy.cn              	122.227.201.20

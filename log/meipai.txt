@@ -1,0 +1,8 @@
+www.meipai.com                	115.231.31.149, 115.231.83.234, 115.238.242.232
+demo.meipai.com               	192.168.41.23
+api.meipai.com                	42.62.18.60
+pepsi.meipai.com              	119.28.48.215, 119.28.48.225
+statistics.meipai.com         	42.62.69.131, 42.62.69.130
+upload.meipai.com             	58.220.6.152, 218.92.221.211
+callback.meipai.com           	42.62.69.186
+testapi.meipai.com            	139.209.90.88, 112.253.38.118, 112.90.240.10

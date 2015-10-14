@@ -1,0 +1,20 @@
+www.zhihu.com                 	58.216.25.33
+static.zhihu.com              	222.132.6.116, 101.23.128.47
+beta.zhihu.com                	54.223.174.243
+m.zhihu.com                   	58.216.25.33
+api.zhihu.com                 	60.28.215.122, 60.28.215.123
+status.zhihu.com              	54.223.219.42, 54.223.218.55
+onepiece.zhihu.com            	222.161.220.33
+analytics.zhihu.com           	222.161.220.33
+at.zhihu.com                  	222.161.220.33
+comet.zhihu.com               	222.161.220.33
+daily.zhihu.com               	222.161.220.33
+dudu.zhihu.com                	171.111.157.41, 113.17.172.33
+pal.zhihu.com                 	222.161.220.33
+sweep.zhihu.com               	125.39.223.89
+upload.zhihu.com              	54.223.200.127, 54.223.202.144
+2014.zhihu.com                	54.223.218.55, 54.223.219.42
+web2.zhihu.com                	54.223.159.23, 54.223.145.181
+2013.zhihu.com                	54.223.219.42, 54.223.218.55
+openapi.zhihu.com             	60.28.215.113, 60.28.215.112
+cmcc.zhihu.com                	182.92.236.185

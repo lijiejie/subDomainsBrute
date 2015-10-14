@@ -1,0 +1,42 @@
+www.meitu.com                 	124.167.232.125, 220.194.200.232
+a.meitu.com                   	220.194.200.232, 124.167.232.125
+web.meitu.com                 	183.57.36.11
+corp.meitu.com                	124.167.232.125, 220.194.200.232
+en.meitu.com                  	124.167.232.125, 220.194.200.232
+support.meitu.com             	122.13.248.139
+mail.meitu.com                	123.125.50.215
+u.meitu.com                   	122.13.248.140
+app.meitu.com                 	117.21.205.121, 122.225.30.40, 115.231.23.83, 58.221.78.156
+bbs.meitu.com                 	122.13.248.139
+k.meitu.com                   	183.57.36.11
+data.meitu.com                	122.13.248.139
+vip.meitu.com                 	124.243.219.133
+id.meitu.com                  	111.206.193.65
+m.meitu.com                   	111.202.69.163
+api.meitu.com                 	113.107.57.41, 14.215.100.94, 113.107.56.96, 14.29.54.34, 125.90.204.117, 14.215.100.95, 125.90.204.122
+makeup.meitu.com              	220.194.200.232, 124.167.232.125
+all.meitu.com                 	220.194.200.232, 124.167.232.125
+login.meitu.com               	111.202.69.163
+taobao.meitu.com              	122.13.248.139
+backend.meitu.com             	42.62.18.35
+bug.meitu.com                 	122.13.248.138
+gg.meitu.com                  	122.13.248.139
+wiki.meitu.com                	192.168.41.23
+img01.meitu.com               	42.81.9.46, 219.138.21.63
+work.meitu.com                	192.168.41.122
+pop.meitu.com                 	220.181.72.229
+device.meitu.com              	192.168.41.122
+git.meitu.com                 	192.168.40.121
+mtc.meitu.com                 	122.13.248.139
+oa.meitu.com                  	183.57.36.10
+smtp.meitu.com                	123.125.50.210, 123.125.50.212, 123.125.50.211, 123.125.50.149
+vagrant.meitu.com             	192.168.40.161
+123.meitu.com                 	58.221.78.39, 218.92.227.121, 58.222.19.59, 58.220.43.57, 58.221.78.105
+url.meitu.com                 	122.13.248.136
+dev.app.meitu.com             	183.57.36.11
+t.app.meitu.com               	183.57.36.11
+s2.app.meitu.com              	183.57.36.11
+manager.app.meitu.com         	183.57.36.11
+api.data.meitu.com            	222.132.6.115, 101.23.128.46
+vip.data.meitu.com            	42.62.18.41
+api.makeup.meitu.com          	58.216.21.146

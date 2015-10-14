@@ -1,0 +1,11 @@
+www.fotoplace.cc              	123.59.25.229
+blog.fotoplace.cc             	121.201.14.152
+beta.fotoplace.cc             	123.59.13.110
+monitor.fotoplace.cc          	120.132.78.101
+old.fotoplace.cc              	121.201.7.202
+test.fotoplace.cc             	123.59.10.37
+db.fotoplace.cc               	121.201.7.202
+dn.fotoplace.cc               	183.131.168.145, 122.228.230.45
+git.fotoplace.cc              	123.59.13.113
+test2.fotoplace.cc            	123.59.25.229
+test3.fotoplace.cc            	121.201.8.249

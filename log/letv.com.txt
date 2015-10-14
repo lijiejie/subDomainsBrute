@@ -1,0 +1,240 @@
+groups.letv.com               	115.182.94.238
+pigg-life.letv.com            	115.182.94.238
+sites.letv.com                	115.182.94.238
+www7a.letv.com                	115.182.94.238
+secure.letv.com               	115.182.94.238
+www.letv.com                  	60.5.255.230, 60.223.235.142
+people.letv.com               	115.182.94.238
+my.letv.com                   	106.39.244.224
+club.letv.com                 	211.157.108.153
+union.letv.com                	221.230.140.171
+baidu.letv.com                	60.5.255.230, 60.223.235.142
+pay.letv.com                  	117.121.54.218
+mail.letv.com                 	115.182.93.109
+music.letv.com                	218.92.227.121, 221.230.141.78, 180.97.178.210, 218.92.209.74, 58.218.208.199
+games.letv.com                	14.215.231.174, 183.57.144.187, 219.128.78.74, 183.61.157.33, 14.29.54.34, 14.215.231.173
+portal.letv.com               	123.125.89.168
+news.letv.com                 	60.5.255.230, 60.223.235.142
+task.letv.com                 	123.126.32.246
+bbs.letv.com                  	111.206.208.220
+cc.letv.com                   	10.205.11.32
+passport.letv.com             	115.182.94.246
+app.letv.com                  	111.206.211.247
+edu.letv.com                  	60.223.235.142, 60.5.255.230
+sms.letv.com                  	221.230.140.174
+hd.letv.com                   	117.121.54.248
+shop.letv.com                 	117.121.54.248
+v.letv.com                    	115.182.63.241
+static.letv.com               	60.28.199.238
+tv.letv.com                   	60.5.255.230, 60.223.235.142
+partner.letv.com              	219.234.93.97
+open.letv.com                 	111.206.208.214
+vip.letv.com                  	123.126.32.187
+mail2.letv.com                	115.182.93.109
+go.letv.com                   	202.106.195.29
+car.letv.com                  	123.125.91.229
+auto.letv.com                 	60.5.255.230, 60.223.235.142
+wap.letv.com                  	123.126.32.246
+m.letv.com                    	111.206.211.251
+u.letv.com                    	221.230.140.170
+admin.letv.com                	10.0.199.213
+api.letv.com                  	111.206.208.252
+d1.letv.com                   	218.59.144.119, 125.32.112.76
+ui.letv.com                   	115.182.63.232
+wm.letv.com                   	123.126.32.224
+jobs.letv.com                 	115.182.93.234
+fly.letv.com                  	115.182.51.71, 115.182.51.26
+viva.letv.com                 	220.181.117.38
+index.letv.com                	117.121.58.223
+download.letv.com             	115.182.94.227
+des.letv.com                  	115.182.51.43, 115.182.51.48
+so.letv.com                   	123.126.32.158
+us.letv.com                   	218.241.129.194
+org.letv.com                  	115.182.51.122
+3g.letv.com                   	123.126.32.246
+mobile.letv.com               	123.126.32.224
+analytics.letv.com            	219.234.93.61
+service.letv.com              	10.58.1.249
+client.letv.com               	115.182.51.68
+pc.letv.com                   	221.194.184.166, 111.202.7.252, 101.28.252.4
+labs.letv.com                 	124.248.35.182
+bc.letv.com                   	115.182.51.48
+update.letv.com               	219.234.93.97
+www2.letv.com                 	123.126.32.96
+www1.letv.com                 	119.167.223.139
+stat.letv.com                 	123.125.89.165
+vpn.letv.com                  	115.182.51.136
+dc.letv.com                   	123.125.89.192
+webmaster.letv.com            	60.28.199.213
+bug.letv.com                  	115.182.92.224
+g.letv.com                    	210.14.78.47
+tracker.letv.com              	119.167.210.27, 115.182.51.18, 115.182.51.42, 60.28.199.218
+ag.letv.com                   	112.127.164.116
+disk.letv.com                 	117.121.54.47, 117.121.54.48
+autodiscover.letv.com         	115.182.93.109
+analyse.letv.com              	219.234.93.87
+ark.letv.com                  	111.206.211.239
+bale.letv.com                 	122.11.45.223
+box.letv.com                  	115.182.51.77
+bss.letv.com                  	115.182.94.157
+cartoon.letv.com              	220.181.117.38
+clip.letv.com                 	115.182.51.113
+cloud.letv.com                	111.206.211.231
+comic.letv.com                	115.231.132.76, 183.131.192.83
+coop.letv.com                 	111.206.211.240, 111.206.211.198, 111.206.211.206, 123.125.89.132
+edm.letv.com                  	119.57.39.60
+family.letv.com               	115.182.51.38
+film.letv.com                 	220.181.117.38
+fms.letv.com                  	123.126.32.19
+fz.letv.com                   	111.206.211.239
+game.letv.com                 	210.14.78.47
+girls.letv.com                	221.230.141.78, 180.97.178.210, 218.92.227.121, 218.92.209.74, 58.218.208.199
+hb.letv.com                   	113.57.248.51, 113.57.248.50
+hao.letv.com                  	220.181.117.38
+hdtv.letv.com                 	115.182.51.246
+hot.letv.com                  	123.126.32.224
+hpy.letv.com                  	60.28.199.219
+ims.letv.com                  	123.125.89.201
+job.letv.com                  	111.206.208.220
+kaka.letv.com                 	220.181.155.232
+learning.letv.com             	115.182.51.106
+lehi.letv.com                 	117.121.58.214
+lm.letv.com                   	125.32.112.71
+mgr.letv.com                  	219.234.93.97
+midi.letv.com                 	220.181.117.38
+mini.letv.com                 	124.160.124.43
+mms.letv.com                  	220.181.153.27
+nba.letv.com                  	111.202.7.252, 211.90.28.98, 60.6.197.39
+oa.letv.com                   	10.200.91.175
+o.letv.com                    	123.125.91.229
+oss.letv.com                  	10.100.54.73
+pad.letv.com                  	115.182.93.246
+pan.letv.com                  	111.206.211.231
+pv.letv.com                   	10.125.89.228
+q.letv.com                    	115.182.94.122
+rec.letv.com                  	123.125.89.244
+redcliff.letv.com             	123.126.32.187
+rvs.letv.com                  	123.125.89.244
+rule.letv.com                 	115.182.93.135
+show.letv.com                 	121.201.1.104
+sp.letv.com                   	221.230.140.171
+sso.letv.com                  	111.206.208.241, 123.125.91.237
+trident.letv.com              	123.126.34.41
+un.letv.com                   	115.182.51.97
+upload.letv.com               	123.125.89.181
+uts.letv.com                  	115.182.94.215
+vas.letv.com                  	123.125.89.196
+vms.letv.com                  	123.125.89.178, 123.125.89.177, 123.125.89.179
+wo.letv.com                   	113.57.248.22
+yun.letv.com                  	111.206.211.231
+x.letv.com                    	106.38.180.238
+xj.letv.com                   	124.88.3.185, 124.88.3.183
+svn.letv.com                  	119.57.33.161
+iphone.letv.com               	115.182.94.228
+UN.letv.com                   	115.182.51.97
+ipad.letv.com                 	111.206.211.251
+zy.letv.com                   	220.181.117.38
+c1.letv.com                   	125.32.112.76
+t1.letv.com                   	121.11.150.200
+update2.letv.com              	219.234.93.156
+mgame.letv.com                	42.159.6.220
+admin.my.letv.com             	115.182.51.62
+api.my.letv.com               	111.206.208.191
+test.bbs.letv.com             	10.204.8.169
+api.task.letv.com             	123.126.32.246
+m.bbs.letv.com                	111.206.208.220
+dev.cc.letv.com               	106.38.226.163
+search.bbs.letv.com           	140.206.161.48, 112.64.235.19
+weixin.cc.letv.com            	111.206.211.236
+wechat.cc.letv.com            	115.182.63.228
+api.cc.letv.com               	10.205.11.30
+api.app.letv.com              	111.206.211.247
+test.hd.letv.com              	115.182.63.99
+web.shop.letv.com             	117.121.54.248
+t.sms.letv.com                	10.154.156.21
+bbs.shop.letv.com             	111.206.208.220
+app.shop.letv.com             	117.121.58.236, 117.121.54.224
+wiki.tv.letv.com              	220.181.155.234
+jira.tv.letv.com              	220.181.155.234
+portal.shop.letv.com          	117.121.54.224
+s.shop.letv.com               	10.150.130.231
+download.shop.letv.com        	117.121.54.84
+forum.shop.letv.com           	117.121.54.224
+s3.go.letv.com                	10.200.91.248
+s.go.letv.com                 	106.38.226.248
+t.m.letv.com                  	115.182.51.46
+test.m.letv.com               	220.181.153.236
+test2.m.letv.com              	123.125.89.163
+sys.m.letv.com                	10.200.93.73
+api.m.letv.com                	111.206.211.241
+down.m.letv.com               	61.240.138.248, 101.26.39.9, 221.204.171.158, 123.130.123.8, 121.30.192.12
+app.m.letv.com                	123.126.32.234
+data.api.letv.com             	123.126.32.212
+dev.org.letv.com              	115.182.51.122
+s2.org.letv.com               	115.182.51.122
+t.org.letv.com                	115.182.51.122
+developer.org.letv.com        	115.182.51.122
+s3.org.letv.com               	115.182.51.122
+app.client.letv.com           	117.121.58.217
+dl.client.letv.com            	60.28.199.197
+svn.client.letv.com           	115.182.51.44
+cms.client.letv.com           	115.182.51.118
+download.bc.letv.com          	218.58.208.234, 60.211.182.81, 218.58.208.218, 218.58.208.24
+dev.dc.letv.com               	10.154.250.23
+bbs.g.letv.com                	210.14.78.47
+test.ark.letv.com             	10.154.156.146, 10.154.156.147
+admin.bss.letv.com            	115.182.94.129
+adm.bss.letv.com              	115.182.94.157
+api.bss.letv.com              	115.182.94.154, 115.182.94.155, 115.182.94.156
+dev.cloud.letv.com            	10.200.93.215
+test.cloud.letv.com           	111.206.211.231
+a.cloud.letv.com              	123.125.91.242
+api.cloud.letv.com            	10.130.208.243, 10.181.155.235, 10.200.93.214
+m.cloud.letv.com              	111.206.211.231
+admin.cloud.letv.com          	10.181.155.214, 10.200.93.214, 10.130.208.243
+proxy.cloud.letv.com          	111.13.123.46, 111.13.123.45
+bbs.family.letv.com           	10.182.51.241
+vpn.family.letv.com           	115.182.51.10
+passport.game.letv.com        	219.234.93.133
+gm.game.letv.com              	122.13.177.202
+manage.game.letv.com          	122.13.177.202
+wx.game.letv.com              	122.13.177.202
+upload.game.letv.com          	122.13.177.202
+pic.game.letv.com             	122.13.177.202
+jira.game.letv.com            	122.13.177.202
+webht.game.letv.com           	113.107.202.202
+1.game.letv.com               	113.107.202.202
+imap.game.letv.com            	113.107.202.202
+test.game.letv.com            	113.107.202.202
+js.game.letv.com              	113.107.202.202
+img.game.letv.com             	113.107.202.202
+admin.hdtv.letv.com           	10.204.28.111
+api.hdtv.letv.com             	123.126.32.230
+app.hdtv.letv.com             	123.126.33.196
+log.hdtv.letv.com             	111.206.208.235
+dev.hdtv.letv.com             	220.181.155.102
+api.kaka.letv.com             	117.121.58.214
+test.lehi.letv.com            	117.121.2.223
+dev.lehi.letv.com             	10.104.29.19
+api.lehi.letv.com             	117.121.2.223
+cms.lehi.letv.com             	220.181.155.211
+api.mms.letv.com              	115.182.94.243
+vpn.oss.letv.com              	119.57.39.18
+svn.oss.letv.com              	115.182.51.16
+dev.pan.letv.com              	10.154.130.241
+api.sso.letv.com              	111.206.208.241, 123.125.91.237
+cache.upload.letv.com         	123.125.89.181
+admin.uts.letv.com            	115.182.94.215
+upload.uts.letv.com           	123.125.91.74
+m.wo.letv.com                 	115.182.51.38
+upgrade.wo.letv.com           	113.57.248.34
+t.s3.go.letv.com              	10.200.91.248
+test2.s3.go.letv.com          	10.200.91.248
+ht.s3.go.letv.com             	10.200.91.248
+developer.s3.go.letv.com      	10.200.91.248
+2.s3.go.letv.com              	10.200.91.248
+test.sys.m.letv.com           	123.125.89.163
+upload.app.m.letv.com         	123.125.89.104
+dev.m.cloud.letv.com          	10.200.93.215
+test.cms.lehi.letv.com        	10.104.29.13
+dev.cms.lehi.letv.com         	10.104.29.19

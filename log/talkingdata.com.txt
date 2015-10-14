@@ -1,0 +1,38 @@
+www.talkingdata.com           	211.151.126.92
+blog.talkingdata.com          	211.151.127.80
+en.talkingdata.com            	54.204.45.218
+beta.talkingdata.com          	211.151.164.170
+m.talkingdata.com             	211.151.126.92
+api.talkingdata.com           	211.151.124.237
+account.talkingdata.com       	211.151.126.92
+autodiscover.talkingdata.com  	132.245.42.248, 132.245.64.88, 132.245.160.40, 191.234.140.200, 191.234.140.40
+pop3.talkingdata.com          	132.245.41.114, 132.245.43.98, 132.245.69.50, 191.234.142.18
+debug.talkingdata.com         	211.151.124.229
+imap.talkingdata.com          	132.245.41.114, 132.245.69.50, 132.245.43.98, 191.234.142.18
+sip.talkingdata.com           	132.245.129.21
+lyncdiscover.talkingdata.com  	132.245.129.24
+sdk.talkingdata.com           	211.151.121.43
+m.debug.talkingdata.com       	211.151.124.229
+api.debug.talkingdata.com     	211.151.124.229
+www.talkingdata.net           	211.151.126.90
+blog.talkingdata.net          	211.151.127.80
+u.talkingdata.net             	211.151.121.59
+mail.talkingdata.net          	54.251.46.71
+api.talkingdata.net           	211.151.121.43
+ic.talkingdata.net            	211.151.124.227
+t.talkingdata.net             	211.101.11.254
+account.talkingdata.net       	211.151.121.53
+analytics.talkingdata.net     	211.151.126.90
+lilly.talkingdata.net         	211.151.127.92
+test.talkingdata.net          	211.151.121.50
+pop3.talkingdata.net          	54.251.46.71
+dt.talkingdata.net            	211.151.164.165
+imap.talkingdata.net          	54.251.46.71
+insight.talkingdata.net       	211.151.121.56
+oracle.talkingdata.net        	211.151.124.227
+push.talkingdata.net          	211.151.121.43
+smtp.talkingdata.net          	54.251.46.71
+spf.talkingdata.net           	54.251.46.71
+yun.talkingdata.net           	211.151.126.90
+pingan.talkingdata.net        	211.151.124.227
+openapi.talkingdata.net       	211.151.126.90

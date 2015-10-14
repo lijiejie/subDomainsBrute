@@ -1,0 +1,85 @@
+www.cctv.com                  	220.194.200.232
+search.cctv.com               	115.182.34.79
+blog.cctv.com                 	115.182.9.179, 115.182.34.163
+i.cctv.com                    	202.108.16.165
+news.cctv.com                 	220.194.200.232
+webmail.cctv.com              	210.74.107.45
+fr.cctv.com                   	220.194.200.232
+mail.cctv.com                 	210.74.107.45
+music.cctv.com                	202.108.8.82
+edu.cctv.com                  	220.194.200.232
+union.cctv.com                	202.108.8.20
+bbs.cctv.com                  	115.182.34.143
+tuan.cctv.com                 	202.108.8.82
+ns1.cctv.com                  	203.93.27.6
+v.cctv.com                    	60.5.255.215, 112.90.246.49, 113.200.235.43
+hd.cctv.com                   	220.194.200.232
+passport.cctv.com             	202.108.8.43
+tv.cctv.com                   	220.194.200.232
+my.cctv.com                   	192.168.168.35
+app.cctv.com                  	175.25.168.40
+welcome.cctv.com              	202.108.8.82
+km.cctv.com                   	218.30.106.65
+car.cctv.com                  	202.108.8.82
+wap.cctv.com                  	202.108.8.82
+online.cctv.com               	61.140.13.103, 125.90.204.117, 14.215.231.174, 14.215.231.173
+img.cctv.com                  	202.108.8.7
+its.cctv.com                  	101.129.1.153
+ads.cctv.com                  	59.151.104.246
+live.cctv.com                 	218.30.106.203
+3g.cctv.com                   	202.108.8.82
+labs.cctv.com                 	202.108.8.5
+pic.cctv.com                  	202.108.8.5
+easy.cctv.com                 	115.182.9.221
+www1.cctv.com                 	202.108.249.209
+ops.cctv.com                  	115.182.34.45
+sh.cctv.com                   	218.1.73.178
+apps.cctv.com                 	202.108.8.53
+golf.cctv.com                 	220.181.168.113
+reg.cctv.com                  	202.108.8.125
+ns2.cctv.com                  	203.93.27.7
+adm.cctv.com                  	10.111.99.24
+bureau.cctv.com               	115.182.34.81
+css.cctv.com                  	202.108.8.8
+gif.cctv.com                  	202.108.8.7
+gts.cctv.com                  	219.141.243.117, 210.74.107.117
+imap.cctv.com                 	219.141.243.47, 210.74.107.47
+js.cctv.com                   	202.108.8.8
+jpg.cctv.com                  	202.108.8.7
+nmail.cctv.com                	101.129.1.151
+phone.cctv.com                	210.74.107.45
+rtx.cctv.com                  	101.129.1.152
+sdc.cctv.com                  	115.182.9.237
+smtp.cctv.com                 	219.141.243.46, 210.74.107.46
+sso.cctv.com                  	218.30.106.205
+streaming.cctv.com            	218.30.106.112
+tb.cctv.com                   	61.135.144.229
+testhp.cctv.com               	101.129.0.1
+tmail.cctv.com                	210.74.107.6
+vms.cctv.com                  	220.181.168.128
+vote.cctv.com                 	202.108.8.52
+was.cctv.com                  	192.168.168.202
+wo.cctv.com                   	115.182.34.111
+ys.cctv.com                   	210.74.108.99
+yp.cctv.com                   	220.181.168.138
+smtp1.cctv.com                	210.74.107.46
+oa1.cctv.com                  	10.111.127.23
+vod.cctv.com                  	220.181.168.140
+oa2.cctv.com                  	10.111.127.24
+big5.cctv.com                 	220.181.168.236
+news1.cctv.com                	202.108.249.209
+flv.cctv.com                  	202.108.17.25
+swf.cctv.com                  	202.108.8.9
+ad1.cctv.com                  	202.108.249.206
+web.search.cctv.com           	115.182.34.79
+hlj.cctv.com                  	222.186.17.100, 180.97.211.38, 222.186.132.79, 58.222.19.61, 221.229.167.47, 221.230.141.78, 180.97.178.210, 218.92.209.74
+img.search.cctv.com           	115.182.34.79
+vip.bbs.cctv.com              	218.30.106.205
+test.tv.cctv.com              	121.14.55.43
+upload.tv.cctv.com            	220.181.168.133
+admin.ads.cctv.com            	59.151.104.56
+t.live.cctv.com               	14.215.231.174, 125.90.204.117, 61.140.13.103, 14.215.231.173
+wiki.ops.cctv.com             	202.108.8.69
+test.apps.cctv.com            	202.108.8.77
+manage.vote.cctv.com          	202.108.9.122
+en.yp.cctv.com                	220.181.168.138

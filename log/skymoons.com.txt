@@ -1,0 +1,10 @@
+www.skymoons.com              	218.92.226.46, 218.92.226.45
+p.skymoons.com                	60.5.254.47, 125.39.1.140, 60.5.254.48
+bd.skymoons.com               	42.62.79.60
+kf.skymoons.com               	42.62.79.60
+seer.skymoons.com             	42.62.79.60
+wx.p.skymoons.com             	42.62.79.60
+admin.dev.skymoons.com        	42.62.105.32
+static.dev.skymoons.com       	42.62.105.32
+test.dev.skymoons.com         	42.62.105.31
+down.dev.skymoons.com         	42.62.105.32

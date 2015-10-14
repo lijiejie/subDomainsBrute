@@ -1,0 +1,23 @@
+www.cnsuning.com              	220.194.200.232, 60.5.255.230
+event.cnsuning.com            	221.226.47.44
+online.cnsuning.com           	218.94.68.22
+mail.cnsuning.com             	58.213.19.252
+bbs.cnsuning.com              	218.94.68.26
+monitor.cnsuning.com          	103.255.94.130
+careers.cnsuning.com          	58.240.86.204
+photo.cnsuning.com            	58.240.86.140
+vpn1.cnsuning.com             	58.240.86.194
+vpn.cnsuning.com              	58.240.86.193
+promo.cnsuning.com            	58.213.19.130
+sl.cnsuning.com               	58.213.19.144
+b2b.cnsuning.com              	218.94.68.10
+hala.cnsuning.com             	103.255.94.114
+honor.cnsuning.com            	61.132.54.154
+mobilemail.cnsuning.com       	58.240.86.180
+model.cnsuning.com            	220.194.200.232, 60.5.255.230
+mop.cnsuning.com              	58.240.86.149
+snr.cnsuning.com              	112.80.230.243, 58.213.19.79
+sso.cnsuning.com              	60.5.255.230, 220.194.200.232
+traveler.cnsuning.com         	58.240.86.235
+weibo.cnsuning.com            	220.194.200.232, 60.5.255.230
+ceshi.cnsuning.com            	58.240.86.244

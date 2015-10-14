@@ -1,0 +1,17 @@
+www.wandafilm.com             	124.238.218.11
+app.wandafilm.com             	124.238.218.11
+mail.wandafilm.com            	60.10.8.250
+services.wandafilm.com        	202.108.222.142
+ns1.wandafilm.com             	202.108.222.205
+pay.wandafilm.com             	60.10.8.11
+api.wandafilm.com             	60.10.8.70
+m.wandafilm.com               	124.238.218.152
+wap.wandafilm.com             	60.10.8.152
+cnc.wandafilm.com             	202.108.222.139
+pic.wandafilm.com             	60.10.8.244
+images.wandafilm.com          	111.161.66.70
+ns2.wandafilm.com             	202.108.222.206
+ctc.wandafilm.com             	219.143.242.251
+mailgw.wandafilm.com          	60.10.8.250
+wx.wandafilm.com              	124.238.218.160
+wxtest.wandafilm.com          	124.238.219.97

@@ -1,0 +1,47 @@
+www.lvmama.com                	60.29.238.101
+cs.lvmama.com                 	114.80.83.172
+search.lvmama.com             	60.29.238.101
+s.lvmama.com                  	60.29.238.101
+bbs.lvmama.com                	60.29.238.102
+ns1.lvmama.com                	114.80.83.166
+static.lvmama.com             	60.29.238.102
+track.lvmama.com              	60.29.238.101
+open.lvmama.com               	60.29.238.101
+sc.lvmama.com                 	60.29.238.101
+api.lvmama.com                	114.80.83.166
+login.lvmama.com              	114.80.83.166
+so.lvmama.com                 	220.181.111.151
+hotel.lvmama.com              	185.28.220.2
+ningbo.lvmama.com             	60.29.238.102
+pic.lvmama.com                	221.194.184.166, 101.28.252.4, 111.202.7.252
+dim.lvmama.com                	114.80.83.177
+conf.lvmama.com               	192.168.0.83
+dm.lvmama.com                 	180.169.51.94
+bj.lvmama.com                 	114.80.83.166
+promo.lvmama.com              	60.29.238.99
+post.lvmama.com               	114.80.79.198
+ns2.lvmama.com                	60.29.238.100
+pop.lvmama.com                	163.177.72.143, 163.177.90.125
+beijing.lvmama.com            	60.29.238.102
+bie.lvmama.com                	60.29.238.100
+bi.lvmama.com                 	114.80.83.165
+broadway.lvmama.com           	114.80.83.164
+child.lvmama.com              	60.29.238.99
+cl.lvmama.com                 	60.29.238.100
+dt.lvmama.com                 	180.169.51.94
+ems.lvmama.com                	114.80.217.180
+fed.lvmama.com                	60.29.238.107
+flight.lvmama.com             	180.153.95.98
+guide.lvmama.com              	60.29.238.102
+imap.lvmama.com               	14.17.57.217, 183.57.48.39
+mad.lvmama.com                	60.29.238.111
+mailer.lvmama.com             	114.80.79.194
+nanjing.lvmama.com            	60.29.238.102
+op.lvmama.com                 	114.80.83.179
+pcadmin.lvmama.com            	60.29.238.106
+pepsi.lvmama.com              	60.29.238.99
+smtp.lvmama.com               	163.177.90.125, 163.177.72.143
+super.lvmama.com              	60.29.238.100
+m1.lvmama.com                 	60.29.238.105
+2010.lvmama.com               	60.29.238.117
+openapi.lvmama.com            	60.29.238.100
