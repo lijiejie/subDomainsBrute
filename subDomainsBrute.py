@@ -86,7 +86,7 @@ class DNSBrute:
 
     def _scan(self):
         thread_id = int( threading.currentThread().getName() )
-        self.resolvers[thread_id].nameservers = [self.dns_servers[thread_id % self.dns_count]]    # must be a list object
+        self.resolvers[thread_id].nameservers.insert(0, self.dns_servers[thread_id % self.dns_count])
         self.resolvers[thread_id].lifetime = self.resolvers[thread_id].timeout = 10.0
         while self.queue.qsize() > 0 and not self.STOP_ME and self.found_count < 4000:    # limit found count to 4000
             sub = self.queue.get(timeout=1.0)
@@ -150,7 +150,7 @@ class DNSBrute:
 if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target.com')
     parser.add_option('-t', '--threads', dest='threads_num',
-              default=30, type='int',
+              default=60, type='int',
               help='Number of threads. default = 30')
     parser.add_option('-f', '--file', dest='names_file', default='dict/subnames.txt',
               type='string', help='Dict file used to brute sub names')
