@@ -88,9 +88,9 @@ class DNSBrute:
         thread_id = int( threading.currentThread().getName() )
         self.resolvers[thread_id].nameservers.insert(0, self.dns_servers[thread_id % self.dns_count])
         self.resolvers[thread_id].lifetime = self.resolvers[thread_id].timeout = 10.0
-        while self.queue.qsize() > 0 and not self.STOP_ME and self.found_count < 4000:    # limit found count to 4000
+        while self.queue.qsize() > 0 and not self.STOP_ME and self.found_count < 40000:    # limit max found records to 40000
             sub = self.queue.get(timeout=1.0)
-            for _ in range(6):
+            for _ in range(3):
                 try:
                     cur_sub_domain = sub + '.' + self.target
                     answers = d.resolvers[thread_id].query(cur_sub_domain)
@@ -118,8 +118,11 @@ class DNSBrute:
                             sys.stdout.flush()
                             self.outfile.write(cur_sub_domain.ljust(30) + '\t' + ips + '\n')
                             self.lock.release()
-                            for i in self.next_subs:
-                                self.queue.put(i + '.' + sub)
+                            try:
+                                d.resolvers[thread_id].query('*.' + cur_sub_domain)
+                            except:
+                                for i in self.next_subs:
+                                    self.queue.put(i + '.' + sub)
                         break
                 except dns.resolver.NoNameservers, e:
                     break
@@ -151,11 +154,11 @@ if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target.com')
     parser.add_option('-t', '--threads', dest='threads_num',
               default=60, type='int',
-              help='Number of threads. default = 30')
+              help='Number of threads. default = 60')
     parser.add_option('-f', '--file', dest='names_file', default='dict/subnames.txt',
               type='string', help='Dict file used to brute sub names')
     parser.add_option('-i', '--ignore-intranet', dest='i', default=False, action='store_true',
-              help='Ignore domains pointed to private IPs.')
+              help='Ignore domains pointed to private IPs')
     parser.add_option('-o', '--output', dest='output', default=None,
               type='string', help='Output file name. default is {target}.txt')
 
@@ -169,3 +172,5 @@ if __name__ == '__main__':
                  threads_num=options.threads_num,
                  output=options.output)
     d.run()
+    while threading.activeCount() > 1:
+        time.sleep(0.1)
