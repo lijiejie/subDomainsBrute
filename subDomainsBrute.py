@@ -281,10 +281,13 @@ class SubNameBrute:
     def run(self):
         self.start_time = time.time()
         for i in range(self.dns_count):
-            t = threading.Thread(target=self._scan, name=str(i))
-            t.setDaemon(True)
-            t.start()
-        while self.thread_count > 1:
+            try:
+                t = threading.Thread(target=self._scan, name=str(i))
+                t.setDaemon(True)
+                t.start()
+            except:
+                pass
+        while self.thread_count > 0:
             try:
                 time.sleep(1.0)
             except KeyboardInterrupt,e:
@@ -292,9 +295,6 @@ class SubNameBrute:
                 sys.stdout.write('\r' + msg + ' ' * (self.console_width- len(msg)) + '\n\r')
                 sys.stdout.flush()
                 self.STOP_ME = True
-
-        while self.thread_count > 0:
-            time.sleep(0.2)
         self.STOP_ME = True
 
 if __name__ == '__main__':
