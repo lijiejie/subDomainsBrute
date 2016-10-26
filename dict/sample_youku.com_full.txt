@@ -1,0 +1,361 @@
+uo.youku.com                  	43.250.15.32
+cvz.youku.com                 	36.86.63.180
+www.youku.com                 	59.82.246.31
+pg.youku.com                  	43.250.12.217
+yp.youku.com                  	59.82.0.48
+u.youku.com                   	45.112.212.41
+4g.youku.com                  	114.80.122.40
+dv.youku.com                  	59.82.246.32
+m2.youku.com                  	66.198.178.110, 66.198.178.120
+msg.youku.com                 	43.250.14.40
+up.youku.com                  	43.250.15.20
+coh.youku.com                 	36.86.63.180
+uctg.youku.com                	59.82.12.44
+lg.youku.com                  	43.250.12.217
+ct.youku.com                  	220.181.60.62
+xdc.youku.com                 	43.250.12.217
+ke.youku.com                  	59.82.12.54
+jlb.youku.com                 	43.250.12.217
+coi.youku.com                 	36.86.63.180
+pi.youku.com                  	118.26.203.135
+yjb.youku.com                 	43.250.15.41
+cu.youku.com                  	220.181.60.62
+cof.youku.com                 	36.86.63.180
+m3.youku.com                  	66.198.178.110, 66.198.178.120
+mx.youku.com                  	211.151.50.220
+s.youku.com                   	211.151.146.209
+cog.youku.com                 	36.86.63.180
+uch.youku.com                 	36.86.63.180
+he.youku.com                  	103.41.143.55
+g1.youku.com                  	66.198.24.240, 66.198.24.250
+ad.youku.com                  	43.250.12.44, 59.82.2.60, 59.82.3.55
+pl.youku.com                  	45.112.212.32
+ent.youku.com                 	43.250.12.44, 59.82.2.60, 59.82.3.55
+img.youku.com                 	47.89.67.253, 66.102.255.60
+coe.youku.com                 	115.124.93.137
+qr.youku.com                  	103.41.143.245
+uc.youku.com                  	43.250.12.217
+p.youku.com                   	119.167.222.133, 119.167.222.144, 119.167.222.148, 119.167.222.151, 119.167.222.152, 119.167.222.153, 119.167.222.154, 119.167.222.76, 119.167.222.80, 119.167.222.81
+m1.youku.com                  	66.198.178.110, 66.198.178.120
+ac.youku.com                  	124.243.193.49
+ucj.youku.com                 	115.124.93.137
+tvs.youku.com                 	43.250.12.44, 59.82.2.60, 59.82.3.55
+g2.youku.com                  	66.198.24.240, 66.198.24.250
+epg.youku.com                 	43.250.12.44, 59.82.2.60, 59.82.3.55
+dl.youku.com                  	210.76.57.125, 218.60.47.145
+ir.youku.com                  	184.51.1.40, 184.51.1.43
+tg.youku.com                  	123.126.98.146, 123.126.98.147, 123.126.98.148, 123.126.98.149, 123.126.98.150, 123.126.98.151
+mms.youku.com                 	118.26.203.135
+3g.youku.com                  	43.250.12.42
+cob.youku.com                 	115.124.93.137
+uck.youku.com                 	115.124.93.137
+sdl.youku.com                 	124.243.193.49
+q.youku.com                   	211.151.146.37
+g3.youku.com                  	66.198.24.240, 66.198.24.250
+jvc.youku.com                 	43.250.12.217
+cr.youku.com                  	211.151.146.61
+sc.youku.com                  	59.82.1.45
+ucl.youku.com                 	115.124.93.137
+ww.youku.com                  	59.82.246.31
+cpm.youku.com                 	211.151.50.120
+n.youku.com                   	211.151.50.87, 211.151.50.88
+crp.youku.com                 	10.103.51.134
+wan.youku.com                 	43.250.15.36
+g4.youku.com                  	66.198.24.240, 66.198.24.250
+ucm.youku.com                 	115.124.93.137
+yun.youku.com                 	43.250.12.47
+ads.youku.com                 	10.100.51.73
+fan.youku.com                 	59.82.1.203
+m4.youku.com                  	66.198.178.110, 66.198.178.120
+dmp.youku.com                 	10.100.188.65
+xz.youku.com                  	103.41.143.37
+es.youku.com                  	59.82.246.32
+mvl.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+api.youku.com                 	45.112.212.33
+adr.youku.com                 	211.151.50.166
+vpn.youku.com                 	218.30.180.180, 218.30.180.184
+uca.youku.com                 	118.98.96.151
+mp.youku.com                  	43.250.14.56
+ctf.youku.com                 	118.26.203.135
+h1.youku.com                  	47.89.65.198, 47.89.65.199, 47.89.65.228, 47.89.65.229
+l.youku.com                   	103.41.143.76, 103.41.143.77, 43.250.12.172, 43.250.12.173, 59.82.0.236, 59.82.0.237, 59.82.0.241, 59.82.0.242
+pcl.youku.com                 	111.206.107.45
+rtx.youku.com                 	114.80.235.167
+jf.youku.com                  	111.206.107.126, 111.206.107.127, 111.206.107.88, 111.206.107.89
+js.youku.com                  	64.71.142.113
+pd.youku.com                  	59.82.246.32
+yes.youku.com                 	124.243.193.15
+g6.youku.com                  	211.151.146.14
+m.youku.com                   	66.198.24.240, 66.198.24.250
+dsp.youku.com                 	43.250.14.58
+wsg.youku.com                 	198.105.244.74, 198.105.254.74
+ksf.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+dmc.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+dev.youku.com                 	211.151.146.103
+3m.youku.com                  	118.26.203.137
+k.youku.com                   	59.82.244.65, 59.82.244.66, 59.82.244.67, 59.82.244.68, 59.82.244.69
+h0.youku.com                  	47.89.65.198, 47.89.65.199, 47.89.65.228, 47.89.65.229
+vip.youku.com                 	45.112.213.31
+pc.youku.com                  	59.82.246.32
+gh.youku.com                  	103.41.143.236
+sx.youku.com                  	43.250.15.36
+cms.youku.com                 	43.250.14.25
+yj.youku.com                  	112.74.140.168
+xa.youku.com                  	1.85.18.31
+win.youku.com                 	220.181.60.65
+i.youku.com                   	45.112.212.40
+nc.youku.com                  	59.82.0.43
+wsd.youku.com                 	198.105.244.74, 198.105.254.74
+tt.youku.com                  	220.181.60.71
+stat.youku.com                	119.167.145.100, 119.167.145.101, 119.167.145.102, 119.167.145.103, 119.167.145.104, 119.167.145.105, 119.167.145.99
+zdd.youku.com                 	43.250.15.233, 43.250.15.234
+edu.youku.com                 	43.250.12.44, 59.82.2.60, 59.82.3.55
+job.youku.com                 	10.107.7.38
+ql.youku.com                  	211.151.146.37
+xiu.youku.com                 	43.250.15.46
+g.youku.com                   	59.82.0.56
+61.youku.com                  	117.21.234.57
+ios.youku.com                 	211.151.146.71
+wse.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+tv.youku.com                  	43.250.12.44, 59.82.2.60, 59.82.3.55
+r3.youku.com                  	80.231.126.240, 80.231.126.250
+e.youku.com                   	103.41.143.37
+pt.youku.com                  	118.26.203.137
+go.youku.com                  	211.151.146.75, 211.151.146.76
+wsc.youku.com                 	198.105.244.74, 198.105.254.74
+amd.youku.com                 	118.26.203.135
+jr.youku.com                  	43.250.15.34
+adm.youku.com                 	10.100.51.18, 10.100.51.19
+c.youku.com                   	59.82.246.32
+bc.youku.com                  	111.206.111.93
+add.youku.com                 	10.106.18.31
+r2.youku.com                  	80.231.126.240, 80.231.126.250
+spv.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+z.youku.com                   	43.250.15.34
+cc.youku.com                  	30.97.97.126
+and.youku.com                 	220.181.185.163
+8.youku.com                   	43.250.15.34
+r1.youku.com                  	80.231.126.240, 80.231.126.250
+x.youku.com                   	43.250.12.23
+vs.youku.com                  	118.26.203.135
+hz.youku.com                  	103.41.143.72, 103.41.143.73, 103.41.143.74, 103.41.143.75
+css.youku.com                 	64.71.142.113
+jp.youku.com                  	1.85.32.130
+cm.youku.com                  	220.181.60.62
+adx.youku.com                 	10.100.188.86
+hysk.youku.com                	211.151.50.105
+gy.youku.com                  	43.250.15.38
+v.youku.com                   	43.250.12.43
+id.youku.com                  	59.82.1.48
+trt.youku.com                 	211.151.146.173
+mfs.youku.com                 	47.89.65.198, 47.89.65.199, 47.89.65.228, 47.89.65.229
+fms.youku.com                 	43.250.14.26
+dot.youku.com                 	43.250.14.30
+star.youku.com                	59.82.246.32
+pls.youku.com                 	43.250.12.47
+md.youku.com                  	43.250.12.174
+exo.youku.com                 	118.26.203.135
+r4.youku.com                  	80.231.126.240, 80.231.126.250
+rz.youku.com                  	103.41.143.246
+cas.youku.com                 	10.100.51.71
+iad.youku.com                 	59.82.12.132, 59.82.12.133
+vq.youku.com                  	211.151.50.229, 211.151.50.230
+zarh.youku.com                	118.98.96.151
+kan.youku.com                 	123.125.105.138
+fa.youku.com                  	103.41.143.37
+cps.youku.com                 	211.151.50.17
+res.youku.com                 	47.89.68.241, 47.89.68.242, 47.89.69.236, 47.89.69.237
+folt.youku.com                	118.98.96.151
+ku.youku.com                  	119.167.145.15
+scan.youku.com                	10.10.73.172
+fdfz.youku.com                	118.98.96.151
+dlic.youku.com                	211.151.146.212, 211.151.146.213
+zxkk.youku.com                	118.98.96.151
+lp.youku.com                  	111.206.107.39, 111.206.107.40, 111.206.107.41
+vapi.youku.com                	43.250.12.47
+fr.youku.com                  	10.103.18.101
+ls.youku.com                  	43.250.12.47
+norz.youku.com                	118.98.96.151
+vote.youku.com                	211.151.50.153
+atm.youku.com                 	220.181.52.92
+avip.youku.com                	59.82.3.51
+smtp.youku.com                	60.247.104.126
+quan.youku.com                	59.82.3.51
+kfc.youku.com                 	60.29.238.4, 60.29.238.5, 60.29.238.6
+lv.youku.com                  	43.250.14.39
+aimg.youku.com                	211.151.146.103
+mail.youku.com                	60.247.104.126
+fans.youku.com                	123.57.142.216
+dmlt.youku.com                	121.29.8.191
+open.youku.com                	59.82.1.43
+pay.youku.com                 	59.82.3.51
+lc.youku.com                  	43.250.15.34
+vali.youku.com                	123.125.18.108, 123.125.18.109
+kids.youku.com                	43.250.14.47
+soku.youku.com                	43.250.12.57
+cyes.youku.com                	43.250.12.47
+ding.youku.com                	43.250.15.25
+shop.youku.com                	101.227.8.102
+xing.youku.com                	43.250.15.46
+wifi.youku.com                	218.60.4.61, 218.60.4.62
+svpn.youku.com                	219.143.250.116
+slog.youku.com                	43.250.12.47
+wwww.youku.com                	43.250.12.42
+skii.youku.com                	118.26.203.135, 118.26.203.137
+user.youku.com                	59.82.1.227
+jxtz.youku.com                	101.201.74.144
+lvip.youku.com                	43.250.14.31
+lama.youku.com                	118.26.203.137
+bkbm.youku.com                	123.126.98.146, 123.126.98.147, 123.126.98.148, 123.126.98.149, 123.126.98.150, 123.126.98.151
+beta.youku.com                	211.151.146.116
+buzz.youku.com                	211.151.146.103
+task.youku.com                	103.41.143.50
+play.youku.com                	43.250.12.59
+push.youku.com                	59.82.0.57
+cvip.youku.com                	43.250.14.31
+club.youku.com                	42.62.109.198
+muse.youku.com                	111.206.107.51, 111.206.107.52, 111.206.107.53, 119.167.222.73, 119.167.222.74, 119.167.222.75
+cncn.youku.com                	211.151.146.103
+blog.youku.com                	211.151.146.103
+lego.youku.com                	124.243.193.49
+list.youku.com                	59.82.12.42
+170.youku.com                 	54.223.231.115
+games.youku.com               	43.250.15.36
+search.youku.com              	211.151.146.209
+passport.youku.com            	59.82.0.43
+share.youku.com               	43.250.15.21
+themis.youku.com              	103.41.143.193, 103.41.143.194
+creation.youku.com            	59.82.12.39
+account.youku.com             	103.41.143.38
+index.youku.com               	43.250.12.25
+event.youku.com               	124.243.193.45, 124.243.193.46, 124.243.193.47
+static.youku.com              	222.192.186.37, 222.192.186.38
+apple.youku.com               	124.243.193.67, 124.243.193.68, 124.243.193.69, 124.243.193.70, 124.243.193.71
+ns1.youku.com                 	220.181.60.19
+manage.youku.com              	43.250.12.151
+login.youku.com               	43.250.12.45
+1903.youku.com                	124.243.193.49
+ns4.youku.com                 	60.217.254.9
+ns3.youku.com                 	202.102.81.119
+apollo.youku.com              	103.41.143.153, 103.41.143.154
+ns2.youku.com                 	123.234.2.35
+mx1.youku.com                 	106.120.71.197
+desktop.youku.com             	60.209.6.174, 60.209.6.213
+comet.youku.com               	211.151.152.78, 211.151.152.79, 211.151.50.228, 211.151.50.246, 59.82.2.141, 59.82.2.142, 59.82.2.143, 59.82.2.144
+console.youku.com             	43.250.14.43
+bandaid.youku.com             	124.243.193.49
+project.youku.com             	124.243.193.45, 124.243.193.46, 124.243.193.47
+insight.youku.com             	10.103.22.31
+merchant.youku.com            	43.250.15.34
+module.youku.com              	43.250.12.42
+point.youku.com               	103.41.143.58
+survey.youku.com              	60.29.234.52
+third.youku.com               	59.82.2.120, 59.82.2.121, 59.82.2.122, 59.82.2.123, 59.82.2.124, 59.82.2.125
+upload.youku.com              	43.250.12.182, 43.250.12.183, 43.250.12.184
+upgrade.youku.com             	43.250.15.124
+wyeth.youku.com               	124.243.193.49
+notify.youku.com              	43.250.15.60
+school.youku.com              	58.205.218.226
+player.youku.com              	43.250.12.86, 43.250.12.87, 43.250.12.88
+iphone.youku.com              	220.181.185.163
+notice.youku.com              	43.250.12.34
+wechat.youku.com              	211.151.153.71
+woodpecker.youku.com          	101.227.8.125
+mx2.youku.com                 	106.120.71.198
+data.yp.youku.com             	59.82.12.49
+static.ke.youku.com           	59.82.12.53
+pop3.youku.com                	60.247.104.126
+test.yjb.youku.com            	59.82.0.216
+cumulus.youku.com             	60.209.6.159, 60.209.6.160
+gateway.youku.com             	43.250.15.34
+live.pl.youku.com             	59.82.1.229
+s.p.youku.com                 	111.206.107.126, 111.206.107.127, 111.206.107.88, 111.206.107.89
+tv.3g.youku.com               	211.151.146.166
+stat.3g.youku.com             	211.151.146.74
+api.wan.youku.com             	43.250.15.36
+blog.api.youku.com            	106.187.48.38
+gateway.api.youku.com         	10.100.188.78
+r.l.youku.com                 	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+p.l.youku.com                 	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+c.l.youku.com                 	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+a.l.youku.com                 	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+m.l.youku.com                 	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+pl.l.youku.com                	59.82.12.100, 59.82.12.101, 59.82.12.102, 59.82.12.103, 59.82.12.104, 59.82.12.105, 59.82.12.106, 59.82.12.107, 59.82.12.108, 59.82.12.109, 59.82.12.110, 59.82.12.111, 59.82.12.112, 59.82.12.113, 59.82.12.114, 59.82.12.95, 59.82.12.96, 59.82.12.97, 59.82.12.98, 59.82.12.99
+api.yes.youku.com             	111.206.111.197
+sandbox.yes.youku.com         	123.126.99.99
+e.yes.youku.com               	59.82.3.58
+dl.m.youku.com                	60.209.6.220, 60.217.252.36
+pk.m.youku.com                	211.151.50.155
+free.m.youku.com              	60.209.6.220, 60.217.252.36
+m.yes.youku.com               	43.250.14.46
+bbs.yes.youku.com             	124.243.193.15
+test.dsp.youku.com            	111.206.111.103
+c.dsp.youku.com               	111.206.111.72, 111.206.111.73
+a.dsp.youku.com               	111.206.111.72, 111.206.111.73
+push.m.youku.com              	43.250.14.188, 43.250.14.189, 43.250.14.190
+api.m.youku.com               	59.82.12.47, 59.82.3.36
+cms.m.youku.com               	10.103.13.73, 10.103.13.74
+stat.m.youku.com              	10.103.13.14
+bbs.yj.youku.com              	124.243.193.11
+e.stat.youku.com              	211.151.153.185, 211.151.153.193, 211.151.153.74, 211.151.153.75
+ex.stat.youku.com             	10.100.14.168
+dl.g.youku.com                	123.159.202.140, 221.204.171.158
+s.e.youku.com                 	43.250.14.69, 43.250.14.70
+static.e.youku.com            	103.41.143.37
+cms.g.youku.com               	43.250.15.36
+special.c.youku.com           	43.250.15.237
+kb.adm.youku.com              	10.100.51.74
+link.hz.youku.com             	103.41.143.72, 103.41.143.73, 103.41.143.74, 103.41.143.75
+static.v.youku.com            	123.125.7.234, 123.125.7.235
+api.md.youku.com              	43.250.15.111
+yws.youku.com                 	43.250.12.41
+csc.youku.com                 	123.126.98.183
+p.atm.youku.com               	211.151.146.64, 211.151.146.65
+m.atm.youku.com               	43.250.15.238
+mp.atm.youku.com              	43.250.15.238
+mi.atm.youku.com              	43.250.15.238
+cm.atm.youku.com              	106.38.221.220
+count.atm.youku.com           	59.82.1.204
+yun.atm.youku.com             	60.205.82.147
+ad.atm.youku.com              	43.250.15.238
+static.atm.youku.com          	111.206.107.66, 111.206.107.67
+vips.youku.com                	59.82.3.51
+td.atm.youku.com              	43.250.15.238
+v.open.youku.com              	59.82.1.224
+yj.open.youku.com             	103.41.143.46
+static.open.youku.com         	43.250.14.56
+doc.open.youku.com            	43.250.14.56
+mc.atm.youku.com              	43.250.15.238
+vod.open.youku.com            	43.250.14.56
+poll.youku.com                	211.151.146.177, 211.151.146.178
+crm.youku.com                 	10.100.188.63
+manage.shop.youku.com         	211.151.153.237
+mogo.youku.com                	120.72.48.12
+c.beta.youku.com              	211.151.146.116
+tv.beta.youku.com             	211.151.146.116
+stat.push.youku.com           	10.100.27.163
+u.share.youku.com             	43.250.15.21
+p.share.youku.com             	10.103.52.122
+bbs.share.youku.com           	42.62.109.198
+pp.manage.youku.com           	43.250.12.32
+res.manage.youku.com          	103.41.143.229
+live.manage.youku.com         	103.41.143.231
+crm.manage.youku.com          	10.100.29.92
+cms.manage.youku.com          	103.41.143.229
+file.manage.youku.com         	103.41.143.229
+od.manage.youku.com           	43.250.12.32
+cert.manage.youku.com         	43.250.12.32
+c.share.youku.com             	43.250.15.21
+vote.manage.youku.com         	103.41.143.229
+test.point.youku.com          	111.13.133.113
+audio.upload.youku.com        	103.41.143.43
+lincoln.youku.com             	118.26.203.137
+test.data.yp.youku.com        	101.227.8.131
+doc.sandbox.yes.youku.com     	123.126.99.99
+monitor.sandbox.yes.youku.com 	123.126.99.99
+admin.sandbox.yes.youku.com   	123.126.99.99
+api.sandbox.yes.youku.com     	123.126.99.99
+test.push.m.youku.com         	211.151.146.143
+manage.cms.m.youku.com        	10.100.27.174, 10.100.27.175
+k.vod.open.youku.com          	101.201.172.30
+u.vod.open.youku.com          	101.201.172.149
