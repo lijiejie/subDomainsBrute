@@ -242,6 +242,7 @@ class SubNameBrute:
                                     _lst.append(i + '.' + sub)
                                     if if_put_one:
                                         self.queue.put(_lst)
+                                        _lst = []
                                     elif len(_lst) >= 10:
                                         self.queue.put(_lst)
                                         _lst = []
