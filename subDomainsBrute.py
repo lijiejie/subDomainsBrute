@@ -73,6 +73,11 @@ class SubNameBrute:
             answers = resolver.query('google-public-dns-a.google.com')    # test look up google public dns
             if answers[0].address != '8.8.8.8':
                 raise Exception('incorrect DNS response')
+            try:
+                resolver.query('lijiejie.wants.to.test.google.com')  # Non-existed domain test
+                raise Exception('[+] Bad DNS Server found %s' % server)
+            except:
+                pass
             if server not in self.dns_servers:
                 self.dns_servers.append(server)
                 self.msg_queue.put('[+] Check DNS Server %s < OK >   Found %s' % (server.ljust(16), len(self.dns_servers)) )
@@ -81,7 +86,7 @@ class SubNameBrute:
 
 
     def _load_sub_names(self):
-        self.msg_queue.put ('[+] Load sub names ...')
+        self.msg_queue.put('[+] Load sub names ...')
         self.queue = Queue.Queue()
         if self.options.full_scan:
             _file = 'dict/subnames_full.txt'
@@ -297,6 +302,7 @@ class SubNameBrute:
                 sys.stdout.flush()
                 self.STOP_ME = True
         self.STOP_ME = True
+
 
 if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target.com', version="%prog 1.0.3")
