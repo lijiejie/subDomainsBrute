@@ -1,6 +1,5 @@
 {alphnum}
-{alpha}{alpha}
-{num}{num}
+{alphnum}{alphnum}
 test
 test2
 t
