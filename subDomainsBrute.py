@@ -77,10 +77,11 @@ class SubNameBrute:
                 resolver.query('lijiejie.wants.to.test.lijiejie.com')  # Non-existed domain test
                 with open('bad_dns_servers.txt', 'a') as f:
                     f.write(server + '\n')
-                raise Exception('[+] Bad DNS Server found %s' % server)
+                self.msg_queue.put('[+] Bad DNS Server found %s' % server)
+                raise Exception('Bad DNS Server found')
             except:
                 pass
-            #if server not in self.dns_servers:
+
             self.dns_servers.append(server)
             self.msg_queue.put('[+] Check DNS Server %s < OK >   Found %s' % (server.ljust(16), len(self.dns_servers)) )
         except:
