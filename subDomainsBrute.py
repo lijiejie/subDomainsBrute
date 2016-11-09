@@ -46,7 +46,7 @@ class SubNameBrute:
 
     def _load_dns_servers(self):
         print '[+] Initializing, validate DNS servers ...'
-        self.dns_servers = dns.resolver.Resolver().nameservers * 2
+        self.dns_servers = []    #dns.resolver.Resolver().nameservers
         with open('dict/dns_servers.txt') as f:
             for line in f:
                 server = line.strip()
@@ -70,18 +70,25 @@ class SubNameBrute:
         resolver.lifetime = resolver.timeout = 2.0
         try:
             resolver.nameservers = [server]
-            answers = resolver.query('google-public-dns-a.google.com')    # test look up google public dns
-            if answers[0].address != '8.8.8.8':
+            answers = resolver.query('public-dns-a.baidu.com')    # test look up google public dns
+            if answers[0].address != '180.76.76.76':
                 raise Exception('incorrect DNS response')
-            if server not in self.dns_servers:
-                self.dns_servers.append(server)
-                self.msg_queue.put('[+] Check DNS Server %s < OK >   Found %s' % (server.ljust(16), len(self.dns_servers)) )
+            try:
+                resolver.query('lijiejie.wants.to.test.lijiejie.com')  # Non-existed domain test
+                with open('bad_dns_servers.txt', 'a') as f:
+                    f.write(server + '\n')
+                raise Exception('[+] Bad DNS Server found %s' % server)
+            except:
+                pass
+            #if server not in self.dns_servers:
+            self.dns_servers.append(server)
+            self.msg_queue.put('[+] Check DNS Server %s < OK >   Found %s' % (server.ljust(16), len(self.dns_servers)) )
         except:
             self.msg_queue.put('[+] Check DNS Server %s <Fail>   Found %s' % (server.ljust(16), len(self.dns_servers)) )
 
 
     def _load_sub_names(self):
-        self.msg_queue.put ('[+] Load sub names ...')
+        self.msg_queue.put('[+] Load sub names ...')
         self.queue = Queue.Queue()
         if self.options.full_scan:
             _file = 'dict/subnames_full.txt'
@@ -291,12 +298,13 @@ class SubNameBrute:
         while self.thread_count > 0:
             try:
                 time.sleep(1.0)
-            except KeyboardInterrupt,e:
+            except KeyboardInterrupt, e:
                 msg = '[WARNING] User aborted, wait all slave threads to exit...'
                 sys.stdout.write('\r' + msg + ' ' * (self.console_width- len(msg)) + '\n\r')
                 sys.stdout.flush()
                 self.STOP_ME = True
         self.STOP_ME = True
+
 
 if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target.com', version="%prog 1.0.3")
