@@ -4,8 +4,7 @@ A simple and fast sub domain brute tool for pentesters. It can rearch as fast as
 
 这个脚本的主要目标是发现其他工具无法探测到的域名, 如Google，aizhan，fofa。高频扫描每秒DNS请求数可超过1000次。
 
-##Change Log (Oct 26, 2016)
-* Work with [subbrute](https://github.com/TheRook/subbrute/blob/master/resolvers.txt)'s DNS Server List, thanks for [TheRook](https://github.com/TheRook)'s excellent work.
+##Change Log (Nov 9, 2016)
 * Time performance optimization
 * Placeholder {alphnum} {alpha} {num} could be used in Names File
 
@@ -15,21 +14,21 @@ First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to 
 
 
 ##Usage
-```
 
-Usage: subDomainsBrute.py [options] target.com
 
-Options:
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-  --full                Full scan, a large NAMES FILE will be used during the
-                        scan
-  -i, --ignore-intranet
-                        Ignore domains pointed to private IPs
-  -o OUTPUT, --output=OUTPUT
-                        Output file name. default is {target}.txt
+	Usage: subDomainsBrute.py [options] target.com
+	
+	Options:
+	  --version             show program's version number and exit
+	  -h, --help            show this help message and exit
+	  --full                Full scan, a large NAMES FILE will be used during the scan
+	  -i, --ignore-intranet
+	                        Ignore domains pointed to private IPs
+	  -o OUTPUT, --output=OUTPUT
+	                        Output file name. default is {target}.txt
 
-```
+
+参数 `-t` 已经去掉了，想要设定并发线程的数量，请直接修改dict\dns_servers.txt文件中的行数即可。
 
 
 ##Screenshot
