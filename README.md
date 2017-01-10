@@ -34,9 +34,6 @@ First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to 
 	                        Output file name. default is {target}.txt
 
 
-参数 `-t` 已经去掉了，想要设定并发线程的数量，请直接修改dict\dns_servers.txt文件中的行数即可。
-
-
 ##Screenshot
 ![screenshot](screenshot.png)
 
