@@ -1,9 +1,6 @@
 {alphnum}
 {alphnum}{alphnum}
-{alpha}{alpha}{alpha}
-{alpha}{alpha}{alpha}{alpha}
-{num}{num}{num}
-{num}{num}{num}{num}
+{alphnum}{alphnum}{alphnum}
 www
 blog
 groups

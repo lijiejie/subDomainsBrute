@@ -1,8 +1,12 @@
-# subDomainsBrute 1.0.3
+# subDomainsBrute 1.0.4
 
 A simple and fast sub domain brute tool for pentesters. It can rearch as fast as 1000 DNS queries per second.
 
 这个脚本的主要目标是发现其他工具无法探测到的域名, 如Google，aizhan，fofa。高频扫描每秒DNS请求数可超过1000次。
+
+##Change Log (Jan 10, 2017)
+* Add support for extremely huge dict like all 6-letter sub names
+* `-t THREADS` could be set, 200 by default
 
 ##Change Log (Nov 9, 2016)
 * Time performance optimization
@@ -15,15 +19,17 @@ First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to 
 
 ##Usage
 
-
 	Usage: subDomainsBrute.py [options] target.com
 	
 	Options:
 	  --version             show program's version number and exit
 	  -h, --help            show this help message and exit
-	  --full                Full scan, a large NAMES FILE will be used during the scan
+	  --full                Full scan, a large NAMES FILE will be used during the
+	                        scan
 	  -i, --ignore-intranet
 	                        Ignore domains pointed to private IPs
+	  -t THREADS, --threads=THREADS
+	                        Num of scan threads, 200 by default
 	  -o OUTPUT, --output=OUTPUT
 	                        Output file name. default is {target}.txt
 
