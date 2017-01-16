@@ -81,7 +81,6 @@ class SubNameBrute:
                 with open('bad_dns_servers.txt', 'a') as f:
                     f.write(server + '\n')
                 self.msg_queue.put('[+] Bad DNS Server found %s' % server)
-                raise Exception('Bad DNS Server found')
             except:
                 self.dns_servers.append(server)
             self.msg_queue.put('[+] Check DNS Server %s < OK >   Found %s' % (server.ljust(16), len(self.dns_servers)))
