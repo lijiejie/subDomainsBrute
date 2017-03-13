@@ -13,6 +13,7 @@ import threading
 import time
 import optparse
 import re
+import os
 from lib.consle_width import getTerminalSize
 
 
@@ -33,8 +34,9 @@ class SubNameBrute:
             _.lifetime = _.timeout = 6.0
         self._load_next_sub()
         self.queue = Queue.Queue()
-        threading.Thread(target=self._load_sub_names).start()
-        while not self.queue.qsize() > 0:
+        t = threading.Thread(target=self._load_sub_names)
+        t.start()
+        while not self.queue.qsize() > 0 and t.isAlive():
             time.sleep(0.1)
         if options.output:
             outfile = options.output
@@ -92,7 +94,13 @@ class SubNameBrute:
         if self.options.full_scan:
             _file = 'dict/subnames_full.txt'
         else:
-            _file = 'dict/subnames.txt'
+            if os.path.exists(self.options.file):
+                _file = self.options.file
+            elif os.path.exists('dict/%s' % self.options.file):
+                _file = 'dict/%s' % self.options.file
+            else:
+                self.msg_queue.put('[ERROR] Names file not exists: %s' % self.options.file)
+                return
 
         normal_lines = []
         wildcard_lines = []
@@ -234,7 +242,7 @@ class SubNameBrute:
                 try:
                     _lst_subs = self.queue.get(timeout=0.1)
                 except:
-                    if time.time() - self.last_scanned > 2:
+                    if time.time() - self.last_scanned > 2.0:
                         break
                     else:
                         continue
@@ -260,10 +268,18 @@ class SubNameBrute:
                             self.ip_dict[(_sub, ips)] = 1
                         else:
                             self.ip_dict[(_sub, ips)] += 1
-                            if self.ip_dict[(_sub, ips)] > 3:
-                                is_wildcard_record = True
+
+                        if ips not in self.ip_dict:
+                            self.ip_dict[ips] = 1
+                        else:
+                            self.ip_dict[ips] += 1
+
+                        if self.ip_dict[(_sub, ips)] > 3 or self.ip_dict[ips] > 6:
+                            is_wildcard_record = True
+
                         if is_wildcard_record:
                             break
+
                         if (not self.ignore_intranet) or (not SubNameBrute.is_intranet(answers[0].address)):
                             self._update_found_count()
                             msg = cur_sub_domain.ljust(30) + ips
@@ -327,8 +343,10 @@ class SubNameBrute:
 
 if __name__ == '__main__':
     parser = optparse.OptionParser('usage: %prog [options] target.com', version="%prog 1.0.4")
+    parser.add_option('-f', dest='file', default='subnames.txt',
+                      help='A file contains new line delimited subs, default is subnames.txt.')
     parser.add_option('--full', dest='full_scan', default=False, action='store_true',
-                      help='Full scan, a large NAMES FILE will be used during the scan')
+                      help='Full scan, NAMES FILE subnames_full.txt will be used to brute')
     parser.add_option('-i', '--ignore-intranet', dest='i', default=False, action='store_true',
                       help='Ignore domains pointed to private IPs')
     parser.add_option('-t', '--threads', dest='threads', default=200, type=int,
