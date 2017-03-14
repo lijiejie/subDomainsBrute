@@ -24,8 +24,10 @@ First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to 
 	Options:
 	  --version             show program's version number and exit
 	  -h, --help            show this help message and exit
-	  --full                Full scan, a large NAMES FILE will be used during the
-	                        scan
+	  -f FILE               A file contains new line delimited subs, default is
+	                        subnames.txt.
+	  --full                Full scan, NAMES FILE subnames_full.txt will be used
+	                        to brute
 	  -i, --ignore-intranet
 	                        Ignore domains pointed to private IPs
 	  -t THREADS, --threads=THREADS
