@@ -106,13 +106,13 @@ class SubNameBrute:
         wildcard_lines = []
         wildcard_list = []
         regex_list = []
-        lines = []
+        lines = set()
         with open(_file) as f:
-            for line in f:
+            for line in f.xreadlines():
                 sub = line.strip()
                 if not sub or sub in lines:
                     continue
-                lines.append(sub)
+                lines.add(sub)
 
                 if sub.find('{alphnum}') >= 0 or sub.find('{alpha}') >= 0 or sub.find('{num}') >= 0:
                     wildcard_lines.append(sub)
@@ -120,6 +120,7 @@ class SubNameBrute:
                     sub = sub.replace('{alpha}', '[a-z]')
                     sub = sub.replace('{num}', '[0-9]')
                     if sub not in wildcard_list:
+                        wildcard_list.append(sub)
                         regex_list.append('^' + sub + '$')
                 else:
                     normal_lines.append(sub)
@@ -289,7 +290,7 @@ class SubNameBrute:
                             self.outfile.flush()
 
                             try:
-                                d.resolvers[thread_id].query('lijiejietest.' + cur_sub_domain)
+                                self.resolvers[thread_id].query('lijiejietest.' + cur_sub_domain)
                             except dns.resolver.NXDOMAIN, e:
                                 _lst = []
                                 if_put_one = (self.queue.qsize() < self.dns_count * 5)
