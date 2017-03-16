@@ -91,7 +91,7 @@ class SubNameBrute:
 
     def _load_sub_names(self):
         self.msg_queue.put('[+] Load sub names ...')
-        if self.options.full_scan:
+        if self.options.full_scan and self.options.file == 'subnames.txt':
             _file = 'dict/subnames_full.txt'
         else:
             if os.path.exists(self.options.file):
