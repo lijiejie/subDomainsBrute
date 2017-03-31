@@ -68,7 +68,11 @@ class SubNameBrute:
             time.sleep(0.1)
         self.dns_count = len(self.dns_servers)
         sys.stdout.write('\n')
-        print '[+] Found %s available DNS servers in total' % self.dns_count
+        print '[+] Found %s available DNS Servers in total' % self.dns_count
+        if self.dns_count == 0:
+            print '[ERROR] No DNS Servers available.'
+            self.STOP_ME = True
+            sys.exit(-1)
 
     def _test_server(self, server):
         resolver = dns.resolver.Resolver()
@@ -79,7 +83,7 @@ class SubNameBrute:
             if answers[0].address != '180.76.76.76':
                 raise Exception('incorrect DNS response')
             try:
-                resolver.query('test.bad.dns.%s' % self.target)    # Non-existed domain test
+                resolver.query('test.bad.dns.lijiejie.com')    # Non-existed domain test
                 with open('bad_dns_servers.txt', 'a') as f:
                     f.write(server + '\n')
                 self.msg_queue.put('[+] Bad DNS Server found %s' % server)
