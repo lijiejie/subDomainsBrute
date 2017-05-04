@@ -1,20 +1,17 @@
-# subDomainsBrute 1.0.4 #
+# subDomainsBrute 1.0.5 #
 
 A simple and fast sub domain brute tool for pentesters. It can rearch as fast as 1000 DNS queries per second.
 
 这个脚本的主要目标是发现其他工具无法探测到的域名, 如Google，aizhan，fofa。高频扫描每秒DNS请求数可超过1000次。
 
-## Change Log (Jan 10, 2017) ##
-* Add support for extremely huge dict like all 6-letter sub names
-* `-t THREADS` could be set, 200 by default
+## Change Log (2017-5-4) ##
+* 使用协程替代了多线程
+* 使用了优化级队列，来减小队列的长度
+* 增加了占位符{next_sub}
 
-## Change Log (Nov 9, 2016) ##
-* Time performance optimization
-* Placeholder {alphnum} {alpha} {num} could be used in Names File
 
 ## Dependencies ##
-First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to do DNS query
-> pip install dnspython
+> pip install dnspython gevent
 
 
 ## Usage ##
@@ -37,8 +34,11 @@ First you need to install [dnspython](http://www.dnspython.org/kits/1.12.0/) to 
 
 
 ## Screenshot ##
+
+如下图所示，小字典扫描qq.com，发现758个域名，耗时在100s以内。
+
 ![screenshot](screenshot.png)
 
-Output file could be like: [https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_youku.com_full.txt](https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_youku.com_full.txt)
+Output file could be like: [https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_qq.com.txt](https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_qq.com.txt)
 
-LiJieJie my[at]lijiejie.com ([Blog](http://www.lijiejie.com))
+From [http://www.lijiejie.com](http://www.lijiejie.com)

@@ -473,7 +473,6 @@ server1
 testing
 brand
 sy
-IN
 buy
 life
 groups
