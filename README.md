@@ -1,8 +1,14 @@
-# subDomainsBrute 1.0.5 #
+subDomainsBrute 1.0.6
+======
 
 A simple and fast sub domain brute tool for pentesters. It can rearch as fast as 1000 DNS queries per second.
 
 这个脚本的主要目标是发现其他工具无法探测到的域名, 如Google，aizhan，fofa。高频扫描每秒DNS请求数可超过1000次。
+
+## Change Log (2017-6-3) ##
+* 增加CNAME扫描，扫描时间将增加
+* Bug fix: normal_lines remove deep copy issus, thanks @BlueIce
+
 
 ## Change Log (2017-5-4) ##
 * 使用协程替代了多线程
