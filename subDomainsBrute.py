@@ -28,7 +28,7 @@ class SubNameBrute:
         self.ignore_intranet = options.i
         self.scan_count = self.found_count = 0
         self.console_width = getTerminalSize()[0] - 2
-        self.resolvers = [dns.resolver.Resolver() for _ in range(options.threads)]
+        self.resolvers = [dns.resolver.Resolver(configure=False) for _ in range(options.threads)]
         for _ in self.resolvers:
             _.lifetime = _.timeout = 10.0
         self.print_count = 0
@@ -48,7 +48,8 @@ class SubNameBrute:
         self.outfile = open(outfile, 'w')
         self.ip_dict = {}
         self.found_subs = set()
-        self.ex_resolver = dns.resolver.Resolver()
+        self.ex_resolver = dns.resolver.Resolver(configure=False)
+        self.ex_resolver.nameservers = self.dns_servers
 
     def _load_dns_servers(self):
         print '[+] Validate DNS servers ...'
@@ -161,10 +162,10 @@ class SubNameBrute:
                             _set.add(item)
                             self.next_subs.append(item)
 
-    def _print_msg(self, _msg=None):
+    def _print_msg(self, _msg=None, _found_msg=False):
         if _msg is None:
             self.print_count += 1
-            if self.print_count < 1000:
+            if self.print_count < 100:
                 return
             self.print_count = 0
             msg = '%s Found| %s Groups| %s scanned in %.1f seconds' % (
@@ -174,6 +175,10 @@ class SubNameBrute:
             sys.stdout.write('\r' + _msg + ' ' * (self.console_width - len(_msg)))
         else:
             sys.stdout.write('\r' + _msg + ' ' * (self.console_width - len(_msg)) + '\n')
+            if _found_msg:
+                msg = '%s Found| %s Groups| %s scanned in %.1f seconds' % (
+                    self.found_count, self.queue.qsize(), self.scan_count, time.time() - self.start_time)
+                sys.stdout.write('\r' + ' ' * (self.console_width - len(msg)) + msg)
         sys.stdout.flush()
 
     @staticmethod
@@ -199,10 +204,10 @@ class SubNameBrute:
 
     def _scan(self, j):
         self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]]
-
         while not self.queue.empty():
             try:
-                item = self.queue.get(timeout=2.0)[1]
+                item = self.queue.get(timeout=1.0)[1]
+                self.scan_count += 1
             except:
                 break
             self._print_msg()
@@ -226,8 +231,10 @@ class SubNameBrute:
                 else:
                     sub = item
 
+                if sub in self.found_subs:
+                    continue
+
                 cur_sub_domain = sub + '.' + self.target
-                self.scan_count += 1
                 _sub = sub.split('.')[-1]
                 try:
                     answers = self.resolvers[j].query(cur_sub_domain)
@@ -235,6 +242,7 @@ class SubNameBrute:
                     answers = self.ex_resolver.query(cur_sub_domain)
 
                 if answers:
+                    self.found_subs.add(sub)
                     ips = ', '.join(sorted([answer.address for answer in answers]))
                     if ips in ['1.1.1.1', '127.0.0.1', '0.0.0.0']:
                         continue
@@ -242,12 +250,8 @@ class SubNameBrute:
                     if self.ignore_intranet and SubNameBrute.is_intranet(answers[0].address):
                         continue
 
-                    if sub in self.found_subs:
-                        continue
-                    else:
-                        self.found_subs.add(sub)
-
                     try:
+                        self.scan_count += 1
                         answers = self.resolvers[j].query(cur_sub_domain, 'cname')
                         cname = answers[0].target.to_unicode().rstrip('.')
                         if cname.endswith(self.target) and cname not in self.found_subs:
@@ -256,22 +260,24 @@ class SubNameBrute:
                             self.queue.put((0, cname_sub))
 
                     except:
-                        if (_sub, ips) not in self.ip_dict:
-                            self.ip_dict[(_sub, ips)] = 1
-                        else:
-                            self.ip_dict[(_sub, ips)] += 1
+                        continue
 
-                        if ips not in self.ip_dict:
-                            self.ip_dict[ips] = 1
-                        else:
-                            self.ip_dict[ips] += 1
+                    if (_sub, ips) not in self.ip_dict:
+                        self.ip_dict[(_sub, ips)] = 1
+                    else:
+                        self.ip_dict[(_sub, ips)] += 1
 
-                        if self.ip_dict[(_sub, ips)] > 3 or self.ip_dict[ips] > 6:
-                            continue
+                    if ips not in self.ip_dict:
+                        self.ip_dict[ips] = 1
+                    else:
+                        self.ip_dict[ips] += 1
+
+                    if self.ip_dict[(_sub, ips)] > 3 or self.ip_dict[ips] > 6:
+                        continue
 
                     self.found_count += 1
                     msg = cur_sub_domain.ljust(30) + ips
-                    self._print_msg(msg)
+                    self._print_msg(msg, _found_msg=True)
                     self._print_msg()
                     self.outfile.write(cur_sub_domain.ljust(30) + '\t' + ips + '\n')
                     self.outfile.flush()
@@ -286,14 +292,12 @@ class SubNameBrute:
                 pass
             except (dns.resolver.NoNameservers, dns.resolver.NoAnswer, dns.exception.Timeout) as e:
                 pass
-            except Exception, e:
+            except Exception as e:
                 import traceback
                 traceback.print_exc()
                 with open('errors.log', 'a') as errFile:
                     errFile.write('[%s] %s %s\n' % (type(e), cur_sub_domain, e))
-                import traceback
-                traceback.print_exc()
-        self._print_msg()
+            self._print_msg()
 
     def run(self):
         threads = [gevent.spawn(self._scan, i) for i in range(self.options.threads)]
