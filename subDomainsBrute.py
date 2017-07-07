@@ -260,7 +260,7 @@ class SubNameBrute:
                             self.queue.put((0, cname_sub))
 
                     except:
-                        continue
+                        pass
 
                     if (_sub, ips) not in self.ip_dict:
                         self.ip_dict[(_sub, ips)] = 1
@@ -311,7 +311,7 @@ class SubNameBrute:
 
 
 if __name__ == '__main__':
-    parser = optparse.OptionParser('usage: %prog [options] target.com', version="%prog 1.0.5")
+    parser = optparse.OptionParser('usage: %prog [options] target.com', version="%prog 1.0.6")
     parser.add_option('-f', dest='file', default='subnames.txt',
                       help='File contains new line delimited subs, default is subnames.txt.')
     parser.add_option('--full', dest='full_scan', default=False, action='store_true',
