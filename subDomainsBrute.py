@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 """
     subDomainsBrute 1.0.6
@@ -17,8 +17,7 @@ import dns.resolver
 import time
 import optparse
 import os
-from lib.consle_width import getTerminalSize
-
+#from lib.consle_width import getTerminalSize replace by shutil in python3+
 
 class SubNameBrute:
     def __init__(self, target, options):
@@ -27,7 +26,8 @@ class SubNameBrute:
         self.options = options
         self.ignore_intranet = options.i
         self.scan_count = self.found_count = 0
-        self.console_width = getTerminalSize()[0] - 2
+        #self.console_width = getTerminalSize()[0] - 2
+        self.console_width = os.get_terminal_size().columns - 2
         self.resolvers = [dns.resolver.Resolver(configure=False) for _ in range(options.threads)]
         for _ in self.resolvers:
             _.lifetime = _.timeout = 10.0
@@ -52,10 +52,10 @@ class SubNameBrute:
         self.ex_resolver.nameservers = self.dns_servers
 
     def _load_dns_servers(self):
-        print '[+] Validate DNS servers ...'
+        print('[+] Validate DNS servers ...')
         self.dns_servers = []
         pool = Pool(30)
-        for server in open('dict/dns_servers.txt').xreadlines():
+        for server in open('dict/dns_servers.txt'):
             server = server.strip()
             if server:
                 pool.apply_async(self._test_server, (server,))
@@ -63,9 +63,9 @@ class SubNameBrute:
 
         self.dns_count = len(self.dns_servers)
         sys.stdout.write('\n')
-        print '[+] Found %s available DNS Servers in total' % self.dns_count
+        print('[+] Found %s available DNS Servers in total' % self.dns_count)
         if self.dns_count == 0:
-            print '[ERROR] No DNS Servers available.'
+            print('[ERROR] No DNS Servers available.')
             sys.exit(-1)
 
     def _test_server(self, server):
@@ -106,7 +106,7 @@ class SubNameBrute:
         regex_list = []
         lines = set()
         with open(_file) as f:
-            for line in f.xreadlines():
+            for line in f:
                 sub = line.strip()
                 if not sub or sub in lines:
                     continue
@@ -238,7 +238,7 @@ class SubNameBrute:
                 _sub = sub.split('.')[-1]
                 try:
                     answers = self.resolvers[j].query(cur_sub_domain)
-                except dns.resolver.NoAnswer, e:
+                except dns.resolver.NoAnswer as e:
                     answers = self.ex_resolver.query(cur_sub_domain)
 
                 if answers:
@@ -304,7 +304,7 @@ class SubNameBrute:
 
         try:
             gevent.joinall(threads)
-        except KeyboardInterrupt, e:
+        except KeyboardInterrupt as e:
             msg = '[WARNING] User aborted.'
             sys.stdout.write('\r' + msg + ' ' * (self.console_width - len(msg)) + '\n\r')
             sys.stdout.flush()
@@ -331,4 +331,4 @@ if __name__ == '__main__':
     d = SubNameBrute(target=args[0], options=options)
     d.run()
     d.outfile.flush()
-    d.outfile.close()
+d.outfile.close()
