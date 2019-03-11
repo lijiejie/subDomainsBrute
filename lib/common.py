@@ -69,6 +69,12 @@ def load_dns_servers():
         sys.exit(-1)
     return dns_servers
 
+def load_cdn_domains():
+    print_msg('[+] Loading CDN Domains',line_feed =True)
+    cdn_domains = []
+    for domain  in open("dict/cdn_domains.txt").readlines():
+        cdn_domains.append(domain.strip())
+    return cdn_domains 
 
 def load_next_sub(options):
     next_subs = []
