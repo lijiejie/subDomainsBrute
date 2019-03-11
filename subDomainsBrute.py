@@ -18,17 +18,19 @@ import signal
 import os
 import glob
 from lib.cmdline import parse_args
-from lib.common import is_intranet, load_dns_servers, load_next_sub, print_msg, get_out_file_name, \
+from lib.common import is_intranet, load_dns_servers, load_cdn_domains,load_next_sub, print_msg, get_out_file_name, \
     user_abort
 
 
 class SubNameBrute:
-    def __init__(self, target, options, process_num, dns_servers, next_subs,
+    def __init__(self, target, options, process_num, dns_servers, cdns,next_subs,
                  scan_count, found_count, queue_size_list, tmp_dir):
         self.target = target.strip()
         self.options = options
         self.process_num = process_num
         self.dns_servers = dns_servers
+        self.cdns = cdns
+
         self.dns_count = len(dns_servers)
         self.next_subs = next_subs
         self.scan_count = scan_count
@@ -107,6 +109,24 @@ class SubNameBrute:
         else:
             self.queue.put((self.priority + num * 10000000, item))
 
+    def check_cdn(self, cname):
+        '''
+        bTrue = True
+        bFound = False
+        i = 0
+        while bTrue:
+          cdn = self.cdns[i]
+          i += 1
+          if (cdn in cname) or (i == len(self.cdns)):
+            if (cdn in cname): bFound = True
+            bTrue = False
+        return bFound
+        '''
+        for cdn in self.cdns:
+          if cdn in cname:
+            return True
+        return False
+
     def _scan(self, j):
         self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]]
         while not self.queue.empty():
@@ -150,6 +170,11 @@ class SubNameBrute:
                     answers = self.ex_resolver.query(cur_sub_domain)
 
                 if answers:
+                    ans = self.resolvers[j].query(cur_sub_domain,'cname')
+                    cname = ans[0].target.to_unicode().rstrip('.')
+
+                    if self.check_cdn(cname):
+                      continue 
                     self.found_subs.add(sub)
                     ips = ', '.join(sorted([answer.address for answer in answers]))
                     if ips in ['1.1.1.1', '127.0.0.1', '0.0.0.0']:
@@ -212,12 +237,12 @@ class SubNameBrute:
 
 
 def run_process(target, options, process_num, dns_servers, next_subs, scan_count, found_count, queue_size_list,
-                tmp_dir):
+                tmp_dir,cdns):
     signal.signal(signal.SIGINT, user_abort)
     s = SubNameBrute(target=target, options=options, process_num=process_num,
-                     dns_servers=dns_servers, next_subs=next_subs,
+                     dns_servers=dns_servers,cdns=cdns, next_subs=next_subs,
                      scan_count=scan_count, found_count=found_count, queue_size_list=queue_size_list,
-                     tmp_dir=tmp_dir)
+                     tmp_dir=tmp_dir,)
     s.run()
 
 
@@ -232,6 +257,7 @@ if __name__ == '__main__':
     multiprocessing.freeze_support()
     all_process = []
     dns_servers = load_dns_servers()
+    cdns = load_cdn_domains()
     next_subs = load_next_sub(options)
     scan_count = multiprocessing.Value('i', 0)
     found_count = multiprocessing.Value('i', 0)
@@ -244,7 +270,7 @@ if __name__ == '__main__':
                                         args=(args[0], options, process_num,
                                               dns_servers, next_subs,
                                               scan_count, found_count,queue_size_list,
-                                              tmp_dir)
+                                              tmp_dir,cdns)
                                         )
             all_process.append(p)
             p.start()
