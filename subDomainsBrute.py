@@ -146,7 +146,7 @@ class SubNameBrute:
                 _sub = sub.split('.')[-1]
                 try:
                     answers = self.resolvers[j].query(cur_sub_domain)
-                except dns.resolver.NoAnswer, e:
+                except dns.resolver.NoAnswer as e:
                     answers = self.ex_resolver.query(cur_sub_domain)
 
                 if answers:
@@ -238,7 +238,7 @@ if __name__ == '__main__':
     queue_size_list = multiprocessing.Array('i', options.process)
 
     try:
-        print '[+] Init %s scan process.' % options.process
+        print('[+] Init %s scan process.' % options.process)
         for process_num in range(options.process):
             p = multiprocessing.Process(target=run_process,
                                         args=(args[0], options, process_num,
@@ -263,9 +263,9 @@ if __name__ == '__main__':
     except KeyboardInterrupt as e:
         for p in all_process:
             p.terminate()
-        print '[ERROR] User aborted the scan!'
+        print('[ERROR] User aborted the scan!')
     except Exception as e:
-        print e
+        print(e)
 
     msg = '[+] All Done. %s found, %s scanned in %.1f seconds.' % (
         found_count.value, scan_count.value, time.time() - start_time)
@@ -276,4 +276,4 @@ if __name__ == '__main__':
             with open(_file,'r') as tmp_f:
                 content = tmp_f.read()
             f.write(content)
-    print '[+] The output file is %s' % out_file_name
+    print('[+] The output file is %s' % out_file_name)
