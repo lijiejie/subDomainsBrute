@@ -1,5 +1,4 @@
-subDomainsBrute 1.1
-======
+# subDomainsBrute 1.2 #
 
 A fast sub domain brute tool for pentesters.
 
@@ -9,11 +8,17 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
 
 
 ## Change Log 
+
+* [2019-05-19] 
+  * Add wildcard test
+  * Scan faster and more reliable, now can brute up to 3000 domains per second
 * [2018-02-06] 
 	* 添加多进程支持。 多进程 + 协程，提升扫描效率。 
 	* 预处理了原字典中的占位符，提升扫描效率
-* [2017-06-03] Bug fix: normal_lines remove deep copy issus, thanks @BlueIce
-* [2017-05-04] 使用协程替代多线程； 使用了优化级队列，来减小队列的长度； 优化占位符支持
+* [2017-06-03] 
+  * Bug fix: normal_lines remove deep copy issues, thanks @BlueIce
+* [2017-05-04] 
+  * 使用协程替代多线程； 使用优化级队列减小队列长度； 优化占位符支持
 
 
 ## Dependencies ##
@@ -41,10 +46,8 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
 
 ## Screenshot ##
 
-如图，使用默认字典，扫描qq.com，发现去重后域名2319个，耗时约298秒。
+如图，使用大字典扫描 qq.com，发现去重后域名3693个，每秒可扫描3000个域名。
 
 ![screenshot](screenshot.png)
-
-Output could be like: [https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_qq.com.txt](https://github.com/lijiejie/subDomainsBrute/blob/master/dict/sample_qq.com.txt)
 
 From [http://www.lijiejie.com](http://www.lijiejie.com)
