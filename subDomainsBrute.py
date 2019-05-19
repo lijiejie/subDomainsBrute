@@ -7,6 +7,8 @@
 """
 
 import multiprocessing
+import warnings
+warnings.simplefilter("ignore", category=UserWarning)
 import gevent
 from gevent import monkey
 monkey.patch_all()
