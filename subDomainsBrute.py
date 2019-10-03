@@ -53,7 +53,7 @@ class SubNameBrute(object):
         regex_list = []
         lines = set()
         with open(self.options.file) as inFile:
-            for line in inFile.xreadlines():
+            for line in inFile.readlines():
                 sub = line.strip()
                 if not sub or sub in lines:
                     continue
@@ -84,21 +84,25 @@ class SubNameBrute(object):
         for _ in wildcard_lines[self.process_num::self.options.process]:
             self.queue.put(_)
 
+    def count_stat(self):
+        with self.lock:
+            self.scan_count.value += self.scan_count_local
+            self.scan_count_local = 0
+            self.queue_size_array[self.process_num] = self.queue.qsize()
+            if self.found_count_local:
+                self.found_count.value += self.found_count_local
+                self.found_count_local = 0
+            self.count_time = time.time()
+
+
     def scan(self, j):
         self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]] + self.dns_servers
 
         while True:
             try:
-                self.lock.acquire()
                 if time.time() - self.count_time > 1.0:
-                    self.scan_count.value += self.scan_count_local
-                    self.scan_count_local = 0
-                    self.queue_size_array[self.process_num] = self.queue.qsize()
-                    if self.found_count_local:
-                        self.found_count.value += self.found_count_local
-                        self.found_count_local = 0
-                    self.count_time = time.time()
-                self.lock.release()
+                    self.count_stat()
+
                 brace_count, sub = self.queue.get(timeout=3.0)
                 if brace_count > 0:
                     brace_count -= 1
@@ -123,7 +127,8 @@ class SubNameBrute(object):
                 if sub in self.found_subs:
                     continue
 
-                self.scan_count_local += 1
+                with self.lock:
+                    self.scan_count_local += 1
                 cur_domain = sub + '.' + self.domain
                 answers = self.resolvers[j].query(cur_domain)
 
@@ -136,7 +141,8 @@ class SubNameBrute(object):
                         continue
 
                     try:
-                        self.scan_count_local += 1
+                        with self.lock:
+                            self.scan_count_local += 1
                         answers = self.resolvers[j].query(cur_domain, 'cname')
                         cname = answers[0].target.to_unicode().rstrip('.')
                         if cname.endswith(self.domain) and cname not in self.found_subs:
@@ -155,12 +161,14 @@ class SubNameBrute(object):
                         if self.ip_dict[(first_level_sub, ips)] > 30:
                             continue
 
-                    self.found_count_local += 1
+                    with self.lock:
+                        self.found_count_local += 1
 
                     self.outfile.write(cur_domain.ljust(30) + '\t' + ips + '\n')
                     self.outfile.flush()
                     try:
-                        self.scan_count_local += 1
+                        with self.lock:
+                            self.scan_count_local += 1
                         self.resolvers[j].query('lijiejie-test-not-existed.' + cur_domain)
                     except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer) as e:
                         if self.queue.qsize() < 10000:
@@ -185,6 +193,8 @@ class SubNameBrute(object):
                 with open('errors.log', 'a') as errFile:
                     errFile.write('[%s] %s\n' % (type(e), str(e)))
 
+        self.count_stat()
+
     def run(self):
         threads = [gevent.spawn(self.scan, i) for i in range(self.options.threads)]
         gevent.joinall(threads)
@@ -203,7 +213,7 @@ def wildcard_test(domain, level=1):
         answers = r.query('lijiejie-not-existed-test.%s' % domain)
         ips = ', '.join(sorted([answer.address for answer in answers]))
         if level == 1:
-            print 'any-sub.%s\t%s' % (domain.ljust(30), ips)
+            print('any-sub.%s\t%s' % (domain.ljust(30), ips))
             wildcard_test('any-sub.%s' % domain, 2)
         elif level == 2:
             exit(0)
@@ -228,9 +238,9 @@ def get_sub_file_path():
 
 if __name__ == '__main__':
     options, args = parse_args()
-    print '''  SubDomainsBrute v1.2
+    print('''  SubDomainsBrute v1.2
   https://github.com/lijiejie/subDomainsBrute
-'''
+''')
     # make tmp dirs
     tmp_dir = 'tmp/%s_%s' % (args[0], int(time.time()))
     if not os.path.exists(tmp_dir):
@@ -244,11 +254,11 @@ if __name__ == '__main__':
     queue_size_array = multiprocessing.Array('i', options.process)
 
     try:
-        print '[+] Run wildcard test'
+        print('[+] Run wildcard test')
         domain = wildcard_test(args[0])
         options.file = get_sub_file_path()
-        print '[+] Start %s scan process' % options.process
-        print '[+] Please wait while scanning ... \n'
+        print('[+] Start %s scan process' % options.process)
+        print('[+] Please wait while scanning ... \n')
         start_time = time.time()
         all_process = []
         for process_num in range(options.process):
@@ -274,11 +284,11 @@ if __name__ == '__main__':
             count += 1
             time.sleep(0.3)
     except KeyboardInterrupt as e:
-        print '[ERROR] User aborted the scan!'
+        print('[ERROR] User aborted the scan!')
         for p in all_process:
             p.terminate()
     except Exception as e:
-        print '[ERROR] %s' % str(e)
+        print('[ERROR] %s' % str(e))
 
     out_file_name = get_out_file_name(domain, options)
     all_domains = set()
@@ -295,4 +305,4 @@ if __name__ == '__main__':
     msg = 'All Done. %s found, %s scanned in %.1f seconds.' % (
         domain_count, scan_count.value, time.time() - start_time)
     print_msg(msg, line_feed=True)
-    print 'Output file is %s' % out_file_name
+    print('Output file is %s' % out_file_name)
