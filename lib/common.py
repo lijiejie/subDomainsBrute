@@ -102,6 +102,8 @@ def get_out_file_name(target, options):
         if _name != '.txt':
             _name = '_' + _name
         outfile = target + _name
+        #
+        outfile = outfile.replace('.txt','.html')
     return outfile
 
 

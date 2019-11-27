@@ -225,6 +225,15 @@ def get_sub_file_path():
             exit(-1)
     return path
 
+def txt_to_html(domain):
+    domain = "http://" + domain
+    url = re.search(r'(\S+)',domain).group(1)
+
+    domain = domain.replace(url,'<a href=" %s " >%s</a>' %(url,url))
+    domain = domain + '<br>'
+    return domain
+
+
 
 if __name__ == '__main__':
     options, args = parse_args()
@@ -290,7 +299,8 @@ if __name__ == '__main__':
                     if domain not in all_domains:
                         domain_count += 1
                         all_domains.add(domain)       # cname query can result in duplicated domains
-                        f.write(domain)
+                        #f.write(domain)
+                        f.write(txt_to_html(domain))
 
     msg = 'All Done. %s found, %s scanned in %.1f seconds.' % (
         domain_count, scan_count.value, time.time() - start_time)
