@@ -1,4 +1,4 @@
-# subDomainsBrute 1.2 #
+# subDomainsBrute 1.3 #
 
 A fast sub domain brute tool for pentesters.
 
@@ -9,6 +9,8 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
 
 ## Change Log 
 
+* [2019-11-27] v1.3
+  * txt文件输出改成了html文件输出
 * [2019-05-19] 
   * Add wildcard test
   * Scan faster and more reliable, now can brute up to 3000 domains per second
