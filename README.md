@@ -1,14 +1,16 @@
-# subDomainsBrute 1.2 #
+# subDomainsBrute 1.3 #
 
 A fast sub domain brute tool for pentesters.
 
-本工具用于渗透测试目标域名收集。高并发DNS暴力枚举，发现其他工具无法探测到的域名, 如Google，aizhan，fofa。
+It works with Python3.5+ or Python2.7 while Python3 users can get better performance.
 
-You can get older versions via [https://github.com/lijiejie/subDomainsBrute/releases](https://github.com/lijiejie/subDomainsBrute/releases)
+高并发的DNS暴力枚举工具。支持Python3.5+和Python2.7，使用Python3.5+ 效率更高。
 
 
 ## Change Log 
 
+* [2020-05-05]
+  * 增加了Python3.5+支持。Python3执行效率更高
 * [2019-05-19] 
   * Add wildcard test
   * Scan faster and more reliable, now can brute up to 3000 domains per second
@@ -21,8 +23,14 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
   * 使用协程替代多线程； 使用优化级队列减小队列长度； 优化占位符支持
 
 
-## Dependencies ##
-> pip install dnspython gevent
+## Install ##
+Python3.5+ users:
+
+* pip install aiodns
+
+Python2 users 
+
+* pip install dnspython gevent
 
 
 ## Usage ##
@@ -37,7 +45,7 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
 	  -i, --ignore-intranet
 	                        Ignore domains pointed to private IPs
 	  -t THREADS, --threads=THREADS
-	                        Num of scan threads, 200 by default
+	                        Num of scan threads, 256 by default
 	  -p PROCESS, --process=PROCESS
 	                        Num of scan Process, 6 by default
 	  -o OUTPUT, --output=OUTPUT
@@ -46,8 +54,6 @@ You can get older versions via [https://github.com/lijiejie/subDomainsBrute/rele
 
 ## Screenshot ##
 
-如图，使用大字典扫描 qq.com，发现去重后域名3693个，每秒可扫描3000个域名。
+如图，使用默认字典扫描baidu.com
 
 ![screenshot](screenshot.png)
-
-From [http://www.lijiejie.com](http://www.lijiejie.com)
