@@ -54,6 +54,6 @@ Python2 users
 
 ## Screenshot ##
 
-如图，使用默认字典扫描baidu.com
+使用大字典，扫描qq.com
 
 ![screenshot](screenshot.png)
