@@ -192,10 +192,11 @@ class SubNameBrute(object):
 
     async def async_run(self):
         await self.load_sub_names()
-        tasks = [self.scan(i) for i in range(self.options.threads)]
+        tasks = [asyncio.ensure_future(self.scan(i))
+                 for i in range(self.options.threads)]
         await asyncio.gather(*tasks)
 
     def run(self):
         self.loop = asyncio.get_event_loop()
-        asyncio.set_event_loop(self.loop)
         self.loop.run_until_complete(self.async_run())
+        self.loop.close()
