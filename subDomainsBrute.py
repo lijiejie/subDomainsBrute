@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
 """
     subDomainsBrute 1.3
     A simple and fast sub domains brute tool for pentesters
@@ -9,14 +7,13 @@
 import sys
 import multiprocessing
 import warnings
-warnings.simplefilter("ignore", category=UserWarning)
 
 
 import time
 import signal
 import os
 import glob
-from lib.cmdline import parse_args
+from lib.cmdline import *
 
 
 if sys.version.split()[0] >= '3.5':
