@@ -44,7 +44,6 @@ if __name__ == '__main__':
 
     multiprocessing.freeze_support()
     dns_servers = load_dns_servers()
-    # exit(0)
     next_subs = load_next_sub(options)
     scan_count = multiprocessing.Value('i', 0)
     found_count = multiprocessing.Value('i', 0)
