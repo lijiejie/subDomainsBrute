@@ -7,6 +7,7 @@ import asyncio
 import aiodns
 from asyncio import PriorityQueue
 from .common import is_intranet
+import random
 
 
 if platform.system() == 'Windows':
@@ -23,7 +24,6 @@ class SubNameBrute(object):
         self.found_count_local = 0
         self.resolvers = [aiodns.DNSResolver(tries=1) for _ in range(self.options.threads)]
         self.queue = PriorityQueue()
-        self.priority = 0
         self.ip_dict = {}
         self.found_subs = set()
         self.timeout_subs = {}
@@ -73,7 +73,13 @@ class SubNameBrute(object):
             await self.queue.put(_)
 
     async def scan(self, j):
-        self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]] + self.dns_servers
+        self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]]
+        if self.dns_count > 1:
+            while True:
+                s = random.choice(self.resolvers)
+                if s != self.dns_servers[j % self.dns_count]:
+                    self.resolvers[j].nameservers.append(s)
+                    break
         while True:
             try:
                 if time.time() - self.count_time > 1.0:
