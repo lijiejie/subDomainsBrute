@@ -1,4 +1,4 @@
-# subDomainsBrute 1.3 #
+# subDomainsBrute 1.4 #
 
 A fast sub domain brute tool for pentesters.
 
@@ -43,6 +43,8 @@ Python2 users
 
 ## Change Log 
 
+* [2020-10-26]
+  * 修复Windows下出现 `too many file descriptors`
 * [2020-05-05]
   * 增加了Python3.5+支持。Python3执行效率更高
 * [2019-05-19] 
