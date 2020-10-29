@@ -142,11 +142,17 @@ class SubNameBrute(object):
                         pass
 
                     first_level_sub = sub.split('.')[-1]
+                    max_found = 20
+
+                    if self.options.w:
+                        first_level_sub = ''
+                        max_found = 3
+
                     if (first_level_sub, ips) not in self.ip_dict:
                         self.ip_dict[(first_level_sub, ips)] = 1
                     else:
                         self.ip_dict[(first_level_sub, ips)] += 1
-                        if self.ip_dict[(first_level_sub, ips)] > 30:
+                        if self.ip_dict[(first_level_sub, ips)] > max_found:
                             continue
 
                     self.found_count_local += 1

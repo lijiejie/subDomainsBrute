@@ -12,6 +12,8 @@ def parse_args():
                       help='Full scan, NAMES FILE subnames_full.txt will be used to brute')
     parser.add_option('-i', '--ignore-intranet', dest='i', default=False, action='store_true',
                       help='Ignore domains pointed to private IPs')
+    parser.add_option('-w', '--wildcard', dest='w', default=False, action='store_true',
+                      help='Force scan after wildcard test fail')
     parser.add_option('-t', '--threads', dest='threads', default=200, type=int,
                       help='Num of scan threads, 200 by default')
     parser.add_option('-p', '--process', dest='process', default=6, type=int,

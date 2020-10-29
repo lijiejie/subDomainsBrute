@@ -43,6 +43,8 @@ Python2 users
 
 ## Change Log 
 
+* [2020-10-29]
+  * 增加支持强制扫描泛解析的域名，需要加 `-w` 参数
 * [2020-10-26]
   * 修复Windows下出现 `too many file descriptors`
 * [2020-05-05]

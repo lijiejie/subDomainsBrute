@@ -51,7 +51,10 @@ if __name__ == '__main__':
 
     try:
         print('[+] Run wildcard test')
-        domain = wildcard_test(args[0], dns_servers)
+        if not options.w:
+            domain = wildcard_test(args[0], dns_servers)
+        else:
+            domain = args[0]
         options.file = get_sub_file_path(options)
         print('[+] Start %s scan process' % options.process)
         print('[+] Please wait while scanning ... \n')
