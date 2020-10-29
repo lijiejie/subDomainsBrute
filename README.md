@@ -34,6 +34,7 @@ Python2 users
 	                        to brute
 	  -i, --ignore-intranet
 	                        Ignore domains pointed to private IPs
+	  -w, --wildcard        Force scan after wildcard test fail
 	  -t THREADS, --threads=THREADS
 	                        Num of scan threads, 256 by default
 	  -p PROCESS, --process=PROCESS
