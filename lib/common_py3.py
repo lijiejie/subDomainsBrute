@@ -101,6 +101,7 @@ async def async_wildcard_test(domain, dns_servers, level=1):
             print('any-sub.%s\t%s' % (domain.ljust(30), ips))
             await async_wildcard_test('any-sub.%s' % domain, dns_servers, 2)
         elif level == 2:
+            print('\nUse -w to enable force scan wildcard domain')
             sys.exit(0)
     except Exception as e:
         return domain
