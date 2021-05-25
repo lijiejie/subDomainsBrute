@@ -5,7 +5,7 @@ import platform
 
 def parse_args():
     parser = optparse.OptionParser('usage: %prog [options] target.com',
-                                   version="%prog 1.2")
+                                   version="%prog 1.4")
     parser.add_option('-f', dest='file', default='subnames.txt',
                       help='File contains new line delimited subs, default is subnames.txt.')
     parser.add_option('--full', dest='full_scan', default=False, action='store_true',
