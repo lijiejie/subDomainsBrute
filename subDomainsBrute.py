@@ -18,7 +18,7 @@ import glob
 from lib.cmdline import parse_args
 
 
-if sys.version.split()[0] >= '3.5':
+if sys.version_info.major >= 3 and sys.version_info.minor >= 5:
     from lib.scanner_py3 import SubNameBrute
     from lib.common_py3 import load_dns_servers, load_next_sub, print_msg, get_out_file_name, \
         user_abort, wildcard_test, get_sub_file_path
