@@ -1,31 +1,44 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 """
-    subDomainsBrute 1.4
+    subDomainsBrute 1.5
     A simple and fast sub domains brute tool for pentesters
     my[at]lijiejie.com (http://www.lijiejie.com)
 """
 
 import sys
 import multiprocessing
-import warnings
-warnings.simplefilter("ignore", category=UserWarning)
-
 import time
 import signal
 import os
 import glob
+import shutil
+import platform
 from lib.cmdline import parse_args
 
 
+import warnings
+warnings.simplefilter("ignore", category=UserWarning)
+max_threads = 1000
+
 if sys.version_info.major >= 3 and sys.version_info.minor >= 5:
+    import asyncio
     from lib.scanner_py3 import SubNameBrute
     from lib.common_py3 import load_dns_servers, load_next_sub, print_msg, get_out_file_name, \
         user_abort, wildcard_test, get_sub_file_path
+    if platform.system() == 'Windows':
+        if sys.version_info.minor >= 8 and hasattr(asyncio, 'WindowsProactorEventLoopPolicy'):
+            asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+        else:
+            if hasattr(asyncio, 'WindowsSelectorEventLoopPolicy'):
+                asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+            max_threads = 200
 else:
     from lib.scanner_py2 import SubNameBrute
     from lib.common_py2 import load_dns_servers, load_next_sub, print_msg, get_out_file_name, \
         user_abort, wildcard_test, get_sub_file_path
+    if platform.system() == 'Windows':
+        max_threads = 200
 
 
 def run_process(*params):
@@ -36,7 +49,9 @@ def run_process(*params):
 
 if __name__ == '__main__':
     options, args = parse_args()
-    print('''SubDomainsBrute v1.4  https://github.com/lijiejie/subDomainsBrute''')
+    if options.threads > max_threads:
+        options.threads = max_threads
+    print('''[+] SubDomainsBrute v1.5  https://github.com/lijiejie/subDomainsBrute''')
     # make tmp dirs
     tmp_dir = 'tmp/%s_%s' % (args[0], int(time.time()))
     if not os.path.exists(tmp_dir):
@@ -44,7 +59,7 @@ if __name__ == '__main__':
 
     multiprocessing.freeze_support()
     dns_servers = load_dns_servers()
-    next_subs = load_next_sub(options)
+    next_subs = load_next_sub(options.full_scan)
     scan_count = multiprocessing.Value('i', 0)
     found_count = multiprocessing.Value('i', 0)
     queue_size_array = multiprocessing.Array('i', options.process)
@@ -61,10 +76,11 @@ if __name__ == '__main__':
         start_time = time.time()
         all_process = []
         for process_num in range(options.process):
-            p = multiprocessing.Process(target=run_process,
-                                        args=(domain, options, process_num, dns_servers, next_subs,
-                                              scan_count, found_count, queue_size_array, tmp_dir)
-                                        )
+            p = multiprocessing.Process(
+                target=run_process,
+                args=(domain, options, process_num, dns_servers, next_subs,
+                      scan_count, found_count, queue_size_array, tmp_dir)
+            )
             all_process.append(p)
             p.start()
 
@@ -107,3 +123,7 @@ if __name__ == '__main__':
         domain_count, scan_count.value, time.time() - start_time)
     print_msg(msg, line_feed=True)
     print('Output file is %s' % out_file_name)
+    try:
+        shutil.rmtree(tmp_dir)
+    except Exception as e:
+        pass

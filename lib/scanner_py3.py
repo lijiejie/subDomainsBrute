@@ -1,18 +1,39 @@
 # -*- encoding: utf-8 -*-
 
-import platform
 import re
 import time
 import asyncio
-import aiodns
+import random
+import socket
+import platform
+import dns.asyncresolver
 from asyncio import PriorityQueue
 from .common import is_intranet
-import random
+from async_timeout import timeout
 
 
 if platform.system() == 'Windows':
-    if hasattr(asyncio, 'WindowsSelectorEventLoopPolicy'):
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    try:
+        def _call_connection_lost(self, exc):
+            try:
+                self._protocol.connection_lost(exc)
+            finally:
+                if hasattr(self._sock, 'shutdown'):
+                    try:
+                        if self._sock.fileno() != -1:
+                            self._sock.shutdown(socket.SHUT_RDWR)
+                    except Exception as e:
+                        pass
+                self._sock.close()
+                self._sock = None
+                server = self._server
+                if server is not None:
+                    server._detach()
+                    self._server = None
+
+        asyncio.proactor_events._ProactorBasePipeTransport._call_connection_lost = _call_connection_lost
+    except Exception as e:
+        pass
 
 
 class SubNameBrute(object):
@@ -22,16 +43,20 @@ class SubNameBrute(object):
         self.dns_count = len(self.dns_servers)
         self.scan_count_local = 0
         self.found_count_local = 0
-        self.resolvers = [aiodns.DNSResolver(tries=1) for _ in range(self.options.threads)]
+        self.resolvers = [dns.asyncresolver.Resolver(configure=False) for _ in range(self.options.threads)]
+        for r in self.resolvers:
+            r.lifetime = 6.0
+            r.timeout = 10.0
         self.queue = PriorityQueue()
         self.ip_dict = {}
         self.found_subs = set()
+        self.cert_subs = set()
         self.timeout_subs = {}
+        self.no_server_subs = {}
         self.count_time = time.time()
         self.outfile = open('%s/%s_part_%s.txt' % (tmp_dir, self.domain, self.process_num), 'w')
         self.normal_names_set = set()
         self.lock = asyncio.Lock()
-        self.loop = None
         self.threads_status = ['1'] * self.options.threads
 
     async def load_sub_names(self):
@@ -72,83 +97,114 @@ class SubNameBrute(object):
         for _ in wildcard_lines[self.process_num::self.options.process]:
             await self.queue.put(_)
 
+    async def update_counter(self):
+        while True:
+            if '1' not in self.threads_status:
+                return
+            self.scan_count.value += self.scan_count_local
+            self.scan_count_local = 0
+            self.queue_size_array[self.process_num] = self.queue.qsize()
+            if self.found_count_local:
+                self.found_count.value += self.found_count_local
+                self.found_count_local = 0
+            self.count_time = time.time()
+            await asyncio.sleep(0.5)
+
+    async def check_https_alt_names(self, domain):
+        try:
+            reader, _ = await asyncio.open_connection(
+                host=domain,
+                port=443,
+                ssl=True,
+                server_hostname=domain,
+            )
+            for item in reader._transport.get_extra_info('peercert')['subjectAltName']:
+                if item[0].upper() == 'DNS':
+                    name = item[1].lower()
+                    if name.endswith(self.domain):
+                        sub = name[:len(name) - len(self.domain) - 1]    # new sub
+                        sub = sub.replace('*', '')
+                        sub = sub.strip('.')
+                        if sub and sub not in self.found_subs and \
+                                sub not in self.normal_names_set and sub not in self.cert_subs:
+                            self.cert_subs.add(sub)
+                            await self.queue.put((0, sub))
+        except Exception as e:
+            pass
+
+
+    async def do_query(self, j, cur_domain):
+        async with timeout(10.2):
+            return await self.resolvers[j].resolve(cur_domain, 'A')
+        # asyncio.wait_for did not work properly
+        # hang up in some cases, we use async_timeout instead
+        # return await asyncio.wait_for(self.resolvers[j].resolve(cur_domain, 'A', lifetime=8), timeout=9)
+
     async def scan(self, j):
         self.resolvers[j].nameservers = [self.dns_servers[j % self.dns_count]]
         if self.dns_count > 1:
             while True:
-                s = random.choice(self.resolvers)
+                s = random.choice(self.dns_servers)
                 if s != self.dns_servers[j % self.dns_count]:
                     self.resolvers[j].nameservers.append(s)
                     break
+        empty_counter = 0
         while True:
             try:
-                if time.time() - self.count_time > 1.0:
-                    async with self.lock:
-                        self.scan_count.value += self.scan_count_local
-                        self.scan_count_local = 0
-                        self.queue_size_array[self.process_num] = self.queue.qsize()
-                        if self.found_count_local:
-                            self.found_count.value += self.found_count_local
-                            self.found_count_local = 0
-                        self.count_time = time.time()
-
-                try:
-                    brace_count, sub = self.queue.get_nowait()
-                    self.threads_status[j] = '1'
-                except asyncio.queues.QueueEmpty as e:
+                brace_count, sub = self.queue.get_nowait()
+                self.threads_status[j] = '1'
+                empty_counter = 0
+            except asyncio.queues.QueueEmpty as e:
+                empty_counter += 1
+                if empty_counter > 10:
                     self.threads_status[j] = '0'
-                    await asyncio.sleep(0.5)
-                    if '1' not in self.threads_status:
-                        break
-                    else:
-                        continue
-
-                if brace_count > 0:
-                    brace_count -= 1
-                    if sub.find('{next_sub}') >= 0:
-                        for _ in self.next_subs:
-                            await self.queue.put((0, sub.replace('{next_sub}', _)))
-                    if sub.find('{alphnum}') >= 0:
-                        for _ in 'abcdefghijklmnopqrstuvwxyz0123456789':
-                            await self.queue.put((brace_count, sub.replace('{alphnum}', _, 1)))
-                    elif sub.find('{alpha}') >= 0:
-                        for _ in 'abcdefghijklmnopqrstuvwxyz':
-                            await self.queue.put((brace_count, sub.replace('{alpha}', _, 1)))
-                    elif sub.find('{num}') >= 0:
-                        for _ in '0123456789':
-                            await self.queue.put((brace_count, sub.replace('{num}', _, 1)))
+                if '1' not in self.threads_status:
+                    break
+                else:
+                    await asyncio.sleep(0.1)
                     continue
-            except Exception as e:
-                import traceback
-                print(traceback.format_exc())
-                break
+
+            if brace_count > 0:
+                brace_count -= 1
+                if sub.find('{next_sub}') >= 0:
+                    for _ in self.next_subs:
+                        await self.queue.put((0, sub.replace('{next_sub}', _)))
+                if sub.find('{alphnum}') >= 0:
+                    for _ in 'abcdefghijklmnopqrstuvwxyz0123456789':
+                        await self.queue.put((brace_count, sub.replace('{alphnum}', _, 1)))
+                elif sub.find('{alpha}') >= 0:
+                    for _ in 'abcdefghijklmnopqrstuvwxyz':
+                        await self.queue.put((brace_count, sub.replace('{alpha}', _, 1)))
+                elif sub.find('{num}') >= 0:
+                    for _ in '0123456789':
+                        await self.queue.put((brace_count, sub.replace('{num}', _, 1)))
+                continue
 
             try:
-
                 if sub in self.found_subs:
                     continue
 
                 self.scan_count_local += 1
                 cur_domain = sub + '.' + self.domain
-                # print('Query %s' % cur_domain)
-                answers = await self.resolvers[j].query(cur_domain, 'A')
 
+                answers = await self.do_query(j, cur_domain)
                 if answers:
                     self.found_subs.add(sub)
-                    ips = ', '.join(sorted([answer.host for answer in answers]))
-                    if ips in ['1.1.1.1', '127.0.0.1', '0.0.0.0', '0.0.0.1']:
+                    ips = ', '.join(sorted([answer.address for answer in answers]))
+                    invalid_ip_found = False
+                    for answer in answers:
+                        if answer.address in ['1.1.1.1', '127.0.0.1', '0.0.0.0', '0.0.0.1']:
+                            invalid_ip_found = True
+                    if invalid_ip_found:
                         continue
                     if self.options.i and is_intranet(answers[0].host):
                         continue
 
                     try:
-                        self.scan_count_local += 1
-                        answers = await self.resolvers[j].query(cur_domain, 'CNAME')
-                        cname = answers[0].target.to_unicode().rstrip('.')
-                        if cname.endswith(self.domain) and cname not in self.found_subs:
+                        cname = str(answers.canonical_name)[:-1]
+                        if cname != cur_domain and cname.endswith(self.domain):
                             cname_sub = cname[:len(cname) - len(self.domain) - 1]    # new sub
-                            if cname_sub not in self.normal_names_set:
-                                self.found_subs.add(cname)
+                            if cname_sub not in self.found_subs and cname_sub not in self.normal_names_set:
                                 await self.queue.put((0, cname_sub))
                     except Exception as e:
                         pass
@@ -171,43 +227,46 @@ class SubNameBrute(object):
 
                     self.outfile.write(cur_domain.ljust(30) + '\t' + ips + '\n')
                     self.outfile.flush()
+
+                    if not self.options.no_cert_check:
+                        async with timeout(10.0):
+                            await self.check_https_alt_names(cur_domain)
+
                     try:
                         self.scan_count_local += 1
-                        await self.resolvers[j].query('lijiejie-test-not-existed.' + cur_domain, 'A')
-                    except aiodns.error.DNSError as e:
-                        if e.args[0] in [4]:
-                            if self.queue.qsize() < 50000:
-                                for _ in self.next_subs:
-                                    await self.queue.put((0, _ + '.' + sub))
-                            else:
-                                await self.queue.put((1, '{next_sub}.' + sub))
-                    except Exception as e:
-                        pass
+                        await self.do_query(j, 'lijiejie-test-not-existed.' + cur_domain)
 
-            except aiodns.error.DNSError as e:
-                if e.args[0] in [1, 4]:
-                    pass
-                elif e.args[0] in [11, 12]:   # 12 timeout   # (11, 'Could not contact DNS servers')
-                    # print('timed out sub %s' % sub)
-                    self.timeout_subs[sub] = self.timeout_subs.get(sub, 0) + 1
-                    if self.timeout_subs[sub] <= 1:
-                        await self.queue.put((0, sub))  # Retry
-                else:
-                    print(e)
-            except asyncio.TimeoutError as e:
+                    except dns.resolver.NXDOMAIN as e:
+                        if self.queue.qsize() < 20000:
+                            for _ in self.next_subs:
+                                await self.queue.put((0, _ + '.' + sub))
+                        else:
+                            await self.queue.put((1, '{next_sub}.' + sub))
+                    except Exception as e:
+                        continue
+
+            except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer) as e:
                 pass
+            except dns.resolver.NoNameservers as e:
+                self.no_server_subs[sub] = self.no_server_subs.get(sub, 0) + 1
+                if self.no_server_subs[sub] <= 3:
+                    await self.queue.put((0, sub))    # Retry again
+            except (dns.exception.Timeout, dns.resolver.LifetimeTimeout) as e:
+                self.timeout_subs[sub] = self.timeout_subs.get(sub, 0) + 1
+                if self.timeout_subs[sub] <= 3:
+                    await self.queue.put((0, sub))    # Retry again
             except Exception as e:
-                import traceback
-                traceback.print_exc()
-                with open('errors.log', 'a') as errFile:
-                    errFile.write('[%s] %s\n' % (type(e), str(e)))
+                if str(type(e)).find('asyncio.exceptions.TimeoutError') < 0:
+                    with open('errors.log', 'a') as errFile:
+                        errFile.write('[%s] %s\n' % (type(e), str(e)))
 
     async def async_run(self):
         await self.load_sub_names()
         tasks = [self.scan(i) for i in range(self.options.threads)]
+        tasks.insert(0, self.update_counter())
         await asyncio.gather(*tasks)
 
     def run(self):
-        self.loop = asyncio.get_event_loop()
-        asyncio.set_event_loop(self.loop)
-        self.loop.run_until_complete(self.async_run())
+        loop = asyncio.get_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(self.async_run())

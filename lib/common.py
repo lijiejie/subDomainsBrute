@@ -22,17 +22,18 @@ def is_intranet(ip):
 
 def print_msg(msg=None, left_align=True, line_feed=False):
     if left_align:
-        sys.stdout.write('\r' + msg + ' ' * (console_width - len(msg)))
-    else:  # right align
-        sys.stdout.write('\r' + ' ' * (console_width - len(msg)) + msg)
+        txt = '\r' + msg + ' ' * (console_width - len(msg))
+    else:
+        txt = '\r' + ' ' * (console_width - len(msg)) + msg    # right align
     if line_feed:
-        sys.stdout.write('\n')
+        txt += '\n'
+    sys.stdout.write(txt)
     sys.stdout.flush()
 
 
-def load_next_sub(options):
+def load_next_sub(full_scan):
     next_subs = []
-    _file = 'dict/next_sub_full.txt' if options.full_scan else 'dict/next_sub.txt'
+    _file = 'dict/next_sub_full.txt' if full_scan else 'dict/next_sub.txt'
     with open(_file) as f:
         for line in f:
             sub = line.strip()
@@ -60,7 +61,7 @@ def get_out_file_name(target, options):
     else:
         _name = os.path.basename(options.file).replace('subnames', '')
         if _name != '.txt':
-            _name = '_' + _name
+            _name = '_' + _name.lstrip('_')
         outfile = target + _name
     return outfile
 
@@ -69,7 +70,6 @@ def user_abort(sig, frame):
     exit(-1)
 
 
-# check file existence
 def get_sub_file_path(options):
     if options.full_scan and options.file == 'subnames.txt':
         sub_file_path = 'dict/subnames_full.txt'
