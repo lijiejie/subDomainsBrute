@@ -6,6 +6,8 @@ import asyncio
 import random
 import socket
 import platform
+import sys
+import os
 import dns.asyncresolver
 from asyncio import PriorityQueue
 from .common import is_intranet
@@ -34,6 +36,11 @@ if platform.system() == 'Windows':
         asyncio.proactor_events._ProactorBasePipeTransport._call_connection_lost = _call_connection_lost
     except Exception as e:
         pass
+
+if sys.version_info.major == 3 and sys.version_info.minor == 6:
+    # I'll do this first, mute stderr
+    # Since python3.6 throws exception from inner function that can not be captured by except ...
+    sys.stderr = open(os.devnull, 'w')
 
 
 class SubNameBrute(object):
