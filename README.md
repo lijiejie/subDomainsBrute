@@ -6,7 +6,7 @@ A fast sub domain brute tool for pentesters, works with Python3.5+ or Python2.7.
 
 
 ## Install ##
-Python3.5+ users:   `pip3 install dnspython async_timeout`
+Python3.5+ users:   `pip3 install dnspython==2.2.1 async_timeout`
 
 Python2.7 users:    `pip install dnspython gevent`
 
