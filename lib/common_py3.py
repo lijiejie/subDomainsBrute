@@ -1,9 +1,10 @@
 # common functions
 
 import sys
+import os
 import asyncio
 import dns.asyncresolver
-from .common import print_msg, load_next_sub, get_out_file_name, user_abort, get_sub_file_path
+from .common import print_msg, load_next_sub, get_out_file_name, user_abort, get_sub_file_path, root_path
 
 
 async def test_server_python3(server, dns_servers):
@@ -38,7 +39,7 @@ def load_dns_servers():
     dns_servers = []
 
     servers_to_test = []
-    for server in open('dict/dns_servers.txt').readlines():
+    for server in open(os.path.join(root_path, 'dict/dns_servers.txt')).readlines():
         server = server.strip()
         if server and not server.startswith('#'):
             servers_to_test.append(server)

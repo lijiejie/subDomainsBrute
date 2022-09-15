@@ -53,7 +53,8 @@ if __name__ == '__main__':
         options.threads = max_threads
     print('''[+] SubDomainsBrute v1.5  https://github.com/lijiejie/subDomainsBrute''')
     # make tmp dirs
-    tmp_dir = 'tmp/%s_%s' % (args[0], int(time.time()))
+    root_path = os.path.dirname(os.path.abspath(__file__))
+    tmp_dir = os.path.join(root_path, 'tmp/%s_%s' % (args[0], int(time.time())))
     if not os.path.exists(tmp_dir):
         os.makedirs(tmp_dir)
 

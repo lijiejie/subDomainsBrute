@@ -1,9 +1,10 @@
 # common functions
 
 import sys
+import os
 from gevent.pool import Pool
 import dns.resolver
-from .common import print_msg, load_next_sub, get_out_file_name, user_abort, get_sub_file_path
+from .common import print_msg, load_next_sub, get_out_file_name, user_abort, get_sub_file_path, root_path
 
 
 def test_server(server, dns_servers):
@@ -30,7 +31,7 @@ def load_dns_servers():
     print_msg('[+] Validate DNS servers', line_feed=True)
     dns_servers = []
     pool = Pool(5)
-    for server in open('dict/dns_servers.txt').readlines():
+    for server in open(os.path.join(root_path, 'dict/dns_servers.txt')).readlines():
         server = server.strip()
         if server and not server.startswith('#'):
             pool.apply_async(test_server, (server, dns_servers))
